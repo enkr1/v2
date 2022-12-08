@@ -1,0 +1,64 @@
+{
+  "firstname": "Jing Hui",
+  "lastname": "PANG",
+  "nickname": "ENKR",
+  "bio": "I am a full time software engineer with a strong passion in solving challenging problems and producing high quality codes and designing in general. With the pecializations in Solution Development, Data Structure Algorithm, and User Interface Design (UI/UX) from <a href=\"https://www.sp.edu.sg/\" target=\"_blank\">Singapore Polytechnic</a>, I foresee myself to contribute to the coding world and make a difference. Currently, I am in love with this functional programming language, <a href=\"https://elixir-lang.org\" target=\"_blank\">Elixir</a> and tech leading in <a href=\"https://pixiumdigital.com/\" target=\"_blank\">Pixium Digital</a>, Singapore.",
+  "list_platforms": [
+    {
+      "name": "GitHub",
+      "className": "github",
+      "link": "https://github.com/enkr1",
+      "fa": "fa-github-square"
+    },
+    {
+      "name": "LinkedIn",
+      "className": "linkedin",
+      "link": "https://www.linkedin.com/in/jinghuipang/",
+      "fa": "fa-linkedin"
+    },
+    {
+      "name": "FaceBook (Meta)",
+      "className": "fb",
+      "link": "https://www.facebook.com/enkrbeatbox",
+      "fa": "fa-facebook-square"
+    },
+    {
+      "name": "Instagram",
+      "className": "ig",
+      "link": "https://www.instagram.com/enkr1/",
+      "fa": "fa-instagram"
+    },
+    {
+      "name": "YouTube",
+      "className": "yt",
+      "link": "https://www.youtube.com/channel/UCJJmK5bN3b4izpMb2vtRXpw",
+      "fa": "fa-youtube"
+    }
+  ],
+  "achievements": [
+    {
+      "title": "list_beatboxing_achievements()",
+      "list": [
+        {
+          "category": "list_solo_titles()",
+          "list": [
+            "Champion of Clementi Community Centre 2018, Singapore.",
+            "Champion of Radiance Beatbox Jam 2019, Singapore.",
+            "Champion of A Cappella Beatbox Championship 2019, Singapore.",
+            "Champion of Cypher Beatbox Battle 2019, Singapore.",
+            "Top 16 Armageddon International Beatbox Battle 2019, Malaysia.",
+            "Top 8 The Capital Beatbox Battle 2019, Malaysia.",
+            "Vice Champion of A Cappella Beatbox Championship 2021, Singapore."
+          ]
+        },
+        {
+          "category": "list_tag_team_titles()",
+          "list": [
+            "Champion of A Cappella Beatbox Battle 2019, Singapore.",
+            "Top 4 Werewolf Beatbox Championship 2019, Indonesia."
+          ]
+        }
+      ]
+    }
+  ]
+}
