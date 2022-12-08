@@ -1,0 +1,86 @@
+/* gallery page  */
+/* this for both  */
+.back a img {
+    position: absolute;
+    height: 2.8rem;
+    width: 3rem;
+    top: 2.5rem;
+    left: 2rem;
+    z-index: 1;
+}
+.back a img:hover {
+    transition: all 0.7s ease;
+    transform: scale(1.2);
+}
+.rotating-box {
+    width: 30rem;
+    height: 30rem;
+    margin: auto;
+    perspective: 100rem;
+}
+.single-rb {
+    width: auto;
+    margin: auto;
+    margin-top: 16rem;
+    animation: box-rotate 16s linear infinite;
+    transform-style: preserve-3d;
+}
+.single-rb img {
+    position: absolute;
+    width: 30rem;
+    height: 30rem;
+} 
+/* .single-rb:hover { */
+    /* animation: box-rotate 22s linear infinite; */ 
+    /* transition: transform 0.3s; */
+/* } */
+.font-side {
+    transform: translateZ(15rem);
+}
+.back-side {
+    transform: rotateY(180deg) translateZ(15rem);
+}
+.left-side {
+    transform: rotateY(-90deg) translateX(-15rem);
+    transform-origin: left;
+}
+.right-side {
+    transform: rotateY(90deg) translateX(15rem);
+    transform-origin: right;
+}
+.top-side {
+    transform: rotateX(-90deg) translateY(-15rem);
+    transform-origin: top;
+}
+.bottom-side {
+    transform: rotateX(90deg) translateY(15rem);
+    transform-origin: bottom;
+}
+.more-button {
+    position: absolute;
+    text-align: center;
+    stroke-dasharray: 5;
+    stroke-dashoffset: 555;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 450%);
+    cursor: pointer;
+}
+.more-button a p {
+    position: absolute;
+    color: var(--pri-color);
+    font-size: 1.5rem;
+    bottom: 0;
+    padding: 2rem;
+    left: 2rem;
+    z-index: 2;
+    /* transform: translate(0, 130%); */
+}
+.more-button #arrow-svg {
+    transform: scale(1.2);
+}
+.more-button:hover #arrow-svg {
+    transition: all 0.3s ease-in-out;
+    animation: line-anime 8s ease forwards;
+}
+/* gallery page  */

@@ -1,0 +1,233 @@
+.landing-section {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    text-align: center;
+    z-index: 1;
+
+    $home-landing-logo-width: 100em;
+
+    .logo {
+        width: $home-landing-logo-width;
+        user-select: none;
+        margin: 0;
+        position: absolute;
+        /* top: 30%; */
+        left: 50%;
+        transform: translate(-50%, -55%);
+
+        @media all and (max-width: $screen_lg) {
+            width: $home-landing-logo-width - 10em;
+        }
+
+        @media all and (max-width: $screen_md_2) {
+            width: $home-landing-logo-width - 30em;
+        }
+
+        @media all and (max-width: $screen_sm) {
+            width: $home-landing-logo-width - 50em;
+        }
+
+        @media all and (max-width: $screen_xs) {
+            width: $home-landing-logo-width - 70em;
+        }
+    }
+
+    h6.main-h6 {
+        font-family: monospace;
+        transform: translateY(12rem);
+        font-size: 2.2rem;
+        font-weight: 300;
+        color: $theme-font-color;
+
+        @media all and (max-width: $screen_lg) {
+            font-size: 1.8rem;
+            transform: translateY(11rem);
+        }
+
+        @media all and (max-width: $screen_md_2) {
+            font-size: 1.5rem;
+            transform: translateY(8rem);
+        }
+
+        @media all and (max-width: $screen_sm) {
+            font-size: 1.2rem;
+            transform: translateY(5rem);
+        }
+    }
+
+    /* action buttons */
+    .landing-action {
+        list-style: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+        transform: translateY(28em);
+        /* opacity: .8; */
+
+        @media all and (max-width: $screen_sm) {
+            transform: translateY(300%);
+        }
+
+        $action-btn-width: 8%;
+
+        .action-btn {
+            height: 3rem;
+            width: $action-btn-width;
+            /* border: 1px solid var(--pri-color); */
+            border-radius: 3rem;
+            margin: .4% 1.4%;
+            box-shadow: $neumorphism-box-shadow;
+            /* Neumorphism */
+            /* -webkit-box-shadow: 
+        0px 0px 10px 0px var(--pri-color);
+    -moz-box-shadow: 
+        0px 0px 10px 0px var(--pri-color);
+    box-shadow: 
+        0px 0px 10px 0px var(--pri-color); */
+
+
+
+            @media all and (max-width: $screen_md_1) {
+                width: 14%;
+                border-radius: 3rem; // SAME THO?
+            }
+
+            @media all and (max-width: $screen_sm) {
+                width: 26%;
+                border-radius: 2rem;
+                margin: 1%;
+            }
+
+            p {
+                transform: translateY(.34rem);
+                font-size: 1.3rem;
+                letter-spacing: .1rem;
+                color: $theme-font-color;
+                text-transform: uppercase;
+
+                @media all and (max-width: $screen_sm) {
+                    transform: translateY(.63rem);
+                    font-size: 1.1rem;
+                    letter-spacing: .2rem;
+                }
+            }
+
+            @media all and (max-width: $screen_xl) {
+
+                /* action buttons */
+                .action-text-1 p,
+                .action-text-2 p,
+                .action-text-3 p {
+                    transform: translateY(.3rem);
+                }
+
+            }
+
+            @media all and (min-width: $screen_md_2 + 1px) {
+
+                /* explore button */
+                &.explore-btn {
+                    transition: all .8s;
+                    box-shadow: unset !important;
+
+                    .scroll-down-anim {
+                        box-shadow: $neumorphism-box-shadow;
+                        width: 100%;
+                        height: 3rem;
+                        border: transparent solid thin;
+                        border-radius: 3rem;
+                        box-sizing: unset;
+                        margin: auto;
+
+                        transition: all .6s;
+
+                        .action-text-2 {
+                            opacity: 1;
+                            // HOVER OFF
+                            transition: opacity 1.6s;
+                        }
+                    }
+
+                    &:hover {
+                        // width: 3rem !important;
+                        // padding: 0 3rem;
+                        // box-shadow: unset !important;
+
+                        .action-text-2 {
+                            opacity: 0;
+                            // HOVER ON
+                            transition: opacity .2s;
+                        }
+
+                        .scroll-down-anim {
+                            box-shadow: unset;
+                            width: 3rem;
+                            height: 5rem;
+                            border: 2px solid $media-icon-color;
+                            border-radius: 2rem;
+                            box-sizing: border-box;
+                            // transition: all .6s;
+
+                            &::before {
+                                content: '';
+                                position: absolute;
+                                width: .6rem;
+                                height: .6rem;
+                                left: 50%;
+                                margin-left: -.3rem;
+                                background-color: $media-icon-color;
+                                border-radius: 100%;
+                                box-sizing: border-box;
+
+                                animation: mouse-scroll-anim 2s infinite;
+                            }
+                        }
+                    }
+
+                }
+            }
+        }
+    }
+}
+
+/* from https://codepen.io/kay8/pen/azKbjN */
+/* github button */
+.bg-slide-to-right {
+    background: linear-gradient(to right, $theme-light-color 10%, rgba(255, 255, 255, 0) 50%);
+    background-size: 200% 100%;
+    background-position: right bottom;
+    transition: all .5s ease-in-out;
+}
+
+.bg-slide-to-right:hover {
+    background-position: left bottom;
+}
+
+.bg-slide-to-right:hover .action-text-1 {
+    z-index: 1;
+    color: $theme-dark-color !important;
+    transition: all .1s ease-in-out !important;
+}
+
+/* portfolio button */
+.bg-slide-to-left {
+    background: linear-gradient(to left, $theme-light-color 10%, rgba(255, 255, 255, 0) 50%);
+    background-size: 200% 100%;
+    background-position: left bottom;
+    transition: all .5s ease-in-out;
+}
+
+.bg-slide-to-left:hover {
+    background-position: right bottom;
+}
+
+.bg-slide-to-left:hover .action-text-3 {
+    z-index: 1;
+    color: $theme-dark-color !important;
+    transition: all .1s ease-in-out !important;
+}

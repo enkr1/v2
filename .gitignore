@@ -1,0 +1,15 @@
+# Mac's
+# find . -name ".DS_Store" -delete
+/.DS_Store
+
+# Obfuscator
+/_000_web_unencrypted_js
+
+# NPM Packages
+/node_modules
+
+# wip
+/_assets
+
+package.json
+package-lock.json

@@ -1,0 +1,180 @@
+/*Start timeline*/
+.experience {
+    height: 100vh;
+
+    @media only screen and (max-width: $screen_md_1) {
+        height: fit-content;
+    }
+
+    // TODO: WIP THE NEW DESIGN
+    @media only screen and (min-width: $screen_md_2) {
+        overflow: hidden;
+
+        .section-heading {
+            position: absolute;
+            user-select: none;
+            z-index: -1;
+            top: 0;
+            left: 0;
+            // transform: rotate(-90deg);
+            transform-origin: bottom;
+            transform: translate(-30%, 80%) rotate(-90deg);
+
+            h1 {
+                font-size: 10rem;
+                color: $theme-h1-color;
+                // transform: translate(-10rem, -20%);
+
+                // &::after {
+                //     content: "experience";
+                //     position: absolute;
+                //     transform: translate(0, 190%);
+                //     left: -24rem;
+                // }
+            }
+
+            h6 {
+                display: none;
+            }
+        }
+    }
+
+    // TODO: WIP THE NEW DESIGN
+    @media only screen and (min-width: $screen_md_2) {
+        .journey-container {
+            // ...
+            height: 100vh;
+            transform: translate(0, 30%);
+        }
+    }
+
+
+    .timeline {
+        margin-left: 22rem;
+        margin-bottom: 8rem;
+
+        @media all and (max-width: $screen_sm) {
+            margin: 0;
+            padding: 0;
+            margin-left: 12rem;
+        }
+
+        ul {
+            border-left: 4px solid $theme-light-color;
+            background-color: rgba(0, 0, 0, .1);
+            margin: 0 auto;
+            list-style: none;
+            text-align: left;
+            width: 100%;
+            padding: 2rem 0 2rem 1rem;
+
+            @media all and (max-width: $screen_md_2) {
+                /* padding: 2rem 0 2rem 1rem; */
+                padding: 1rem 0 3rem 4.3rem;
+                margin: 0 0 0 auto;
+            }
+
+            @media all and (max-width: $screen_sm) {
+                padding: 0 auto;
+                margin: 0 auto;
+            }
+
+            .date {
+                border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+                margin-bottom: 1rem;
+                padding-bottom: 1rem;
+                position: relative;
+
+                &:last-of-type {
+                    padding-bottom: 0;
+                    margin-bottom: 0;
+                    border: none;
+                }
+
+                &::before,
+                &::after {
+                    position: absolute;
+                    display: block;
+                    top: 50%;
+                }
+
+                &::before {
+                    content: attr(data-date);
+                    text-align: right;
+                    min-width: 12rem;
+                    font-size: 2rem;
+                    transform: translate(-20rem, -70%);
+
+                    @media all and (max-width: $screen_md_1) {
+                        transform: translate(-140%, -70%);
+                    }
+
+                    @media all and (max-width: $screen_md_2) {
+                        transform: translate(-22rem, -100%);
+                    }
+
+                    @media all and (max-width: $screen_sm) {
+                        font-size: 1.6rem;
+                        transform: translate(-19rem, -110%);
+                    }
+                }
+
+                &::after {
+                    content: '';
+                    box-shadow: 0 0 0 4px $theme-light-color;
+                    border-radius: 100%;
+                    height: 1.5rem;
+                    width: 1.5rem;
+                    transform: translate(-166%, -80%);
+                    background-color: $theme-dark-color;
+
+                    @media all and (max-width: $screen_md_1) {
+                        transform: translate(-140%, -70%);
+                    }
+
+                    @media all and (max-width: $screen_md_2) {
+                        transform: translate(-355%, -110%);
+                    }
+
+                    @media all and (max-width: $screen_sm) {
+                        /* transform: translateX(-355%);  */
+                    }
+                }
+            }
+
+            h1 {
+                font-size: 2rem;
+                text-transform: uppercase;
+                font-weight: 300;
+                margin-bottom: 0.3rem;
+                opacity: .3;
+            }
+
+            p,
+            h1 {
+                transform: translateX(2.6rem);
+
+                @media all and (max-width: $screen_md_1) {
+                    transform: translateX(1.2rem);
+                }
+
+                @media all and (max-width: $screen_md_2) {
+                    transform: translateX(0);
+                    width: 95%;
+                }
+
+                @media all and (max-width: $screen_sm) {
+                    transform: translateX(-2.4rem);
+                }
+            }
+
+            p {
+                @media all and (max-width: $screen_sm) {
+                    font-size: 1.4rem;
+                }
+            }
+        }
+    }
+}
+
+/*End timeline*/

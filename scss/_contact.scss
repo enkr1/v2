@@ -1,0 +1,282 @@
+/*Start contact*/
+/* interactive anim, exp */
+.contact {
+    // background-color: $theme-dark-color;
+    margin: 0 !important;
+    /*  Neumorphism Theme */
+    // border-top-left-radius: 3rem;
+    // border-top-right-radius: 3rem;
+    // box-shadow: 0px 0px 3rem -1rem $theme-color;
+    height: fit-content;
+
+    // As the # might change location too
+    @media all and (max-width: $screen_sm) {
+        #contact {
+            border-radius: 1rem !important;
+        }
+    }
+
+    .container {
+        padding-top: 4rem;
+        box-shadow: $neumorphism-box-shadow;
+        border-radius: 3rem;
+
+        @media all and (max-width: $screen_sm) {
+            max-width: 90vw;
+        }
+
+        .section-heading {
+            padding: 10rem 0 2rem 0 !important;
+            box-shadow: unset;
+
+            h1 {
+                // ...
+            }
+
+            h6 {
+                // ...
+            }
+        }
+
+        .typing-area {
+            text-align: center;
+            margin-top: -4rem;
+        }
+
+        .typing {
+            display: inline-block;
+            position: relative;
+        }
+
+        .typing::after {
+            content: "|";
+            position: absolute;
+            animation: caret infinite 1s steps(1, end);
+        }
+
+        form.contact-form {
+            position: relative;
+            width: 78%;
+            margin: 0 auto;
+            padding: 0 0 4rem 0;
+            text-align: center;
+
+            @media all and (max-width: $screen_sm) {
+                width: 90%;
+            }
+
+            .name-section,
+            .email-section,
+            .message-section {
+                font-size: 1.8rem;
+                color: $theme-color;
+                width: 100%;
+                position: relative;
+                min-height: 6rem;
+                overflow: hidden;
+                margin: 2rem auto;
+
+                @media all and (max-width: $screen_sm) {
+                    font-size: 1.6rem;
+                }
+            }
+
+
+            // 
+        }
+    }
+}
+
+
+// TODO: Code below too complicated as they are from CSS
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+    /* -webkit-text-fill-color: rgb(197, 197, 197); */
+    -webkit-text-fill-color: $theme-font-color;
+    -webkit-box-shadow: $theme-dark-color;
+    transition: background-color 5000s ease-in-out 0s;
+}
+
+.name-section input,
+.email-section input {
+    width: 100%;
+    height: 100%;
+    padding-top: 2.6rem;
+    border: none;
+    // background-color: $theme-dark-color;
+    background-color: rgba(255, 255, 255, 0);
+}
+
+.message-section textarea {
+    resize: vertical;
+    width: 100%;
+    height: 100%;
+    padding-top: 3.6rem;
+    border: none;
+    // background-color: $theme-dark-color;
+    background-color: rgba(255, 255, 255, 0);
+}
+
+.name-section label,
+.email-section label,
+.message-section label {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    border-bottom: 1px solid $theme-color;
+
+    span {
+        color: $theme-font-color;
+    }
+}
+
+.name-section label::after,
+.email-section label::after,
+.message-section label::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-bottom: 2px solid $theme-light-color;
+    transform: translateX(-100%);
+    transition: transform .6s ease;
+}
+
+.content-name,
+.content-email,
+.content-message {
+    top: 50%;
+    position: absolute;
+    bottom: 5px;
+    left: 0;
+    transition: all 0.3s ease;
+}
+
+.email-section input[value=""] {
+    border: none;
+    outline: none;
+}
+
+.name-section input:focus+.label-name .content-name,
+.name-section input:valid+.label-name .content-name,
+.email-section input:focus+.label-email .content-email,
+.email-section input:valid+.label-email .content-email,
+// FIXME: Temp fix https://stackoverflow.com/questions/8639282/notempty-css-selector-is-not-working
+.email-section input:not([value=""]):not(:focus)+.label-email .content-email,
+// make invalid stay on top too
+// .email-section input:placeholder-shown+.label-email .content-email,
+.message-section textarea:focus+.label-message .content-message,
+.message-section textarea:valid+.label-message .content-message {
+    // transform: translateY(-100%);
+    top: 0;
+    color: $theme-light-color;
+    transition: all .4s ease-in-out;
+}
+
+.name-section input:focus+.label-name::after,
+.name-section input:valid+.label-name::after,
+.email-section input:focus+.label-email::after,
+.email-section input:valid+.label-email::after,
+.message-section textarea:focus+.label-message::after,
+.message-section textarea:valid+.label-message::after {
+    transform: translateX(0%);
+    color: $theme-light-color;
+}
+
+input.contact-submit-btn {
+    margin-top: 6rem;
+    font-size: 1.6rem;
+    height: fit-content;
+    width: initial;
+    color: $theme-font-color;
+    background-color: $theme-dark-color;
+    padding: 0.8rem 3rem;
+    border: none;
+    border-radius: .9rem;
+    cursor: pointer;
+
+    /* Neumorphism pulse */
+    // box-shadow:
+    //     0px 0px 10px 0px $theme-light-color;
+    box-shadow: $neumorphism-box-shadow;
+    transition: all .3s ease-in-out;
+}
+
+input.contact-submit-btn:hover {
+    color: $theme-dark-color;
+    /* background-color: var(--pri-color); */
+
+    transform: scale(.99);
+    /* animation: press .3s; */
+
+    /* stop at last frame */
+    /* animation-fill-mode: forwards;  */
+
+    /* Neumorphism pulse */
+    // box-shadow:
+    //     0px 0px 18px 0px $theme-color;
+    box-shadow: inset $neumorphism-box-shadow;
+    // box-shadow: unset;
+}
+
+// USE FOR CONTACT 
+
+.bg-slide-to-top {
+    background: linear-gradient(to right, $theme-light-color 50%, rgba(255, 255, 255, 0) 50%);
+    background-size: 200% 100%;
+    background-position: right bottom;
+    transition: all .5s ease-in-out;
+}
+
+.bg-slide-to-top:hover {
+    background-position: left bottom;
+}
+
+// --- TESTING ---
+.info-anim {
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0);
+    top: 0;
+    left: 0;
+    border-radius: 1rem;
+    width: fit-content;
+}
+
+.info-anim-inner {
+    cursor: pointer;
+    background-color: $theme-color;
+    padding: 1rem;
+    border-radius: 1rem;
+    width: 100%;
+    clip-path: circle(10% at 10% 50%);
+    transition: all .5s ease-in-out;
+}
+
+.info-anim-inner:hover {
+    clip-path: circle(75%);
+    background-color: $theme-background;
+}
+
+.info-anim-inner span {
+    float: left;
+    font-size: 2rem;
+    font-weight: bold;
+    color: white;
+    color: $theme-light-color;
+}
+
+// --- TESTING ---
+
+/*End contact*/

@@ -1,0 +1,393 @@
+// NEW
+// Navigation bar 
+// ONLY AVAILABLE ON WEB
+.nav-logo-left {
+    display: none;
+}
+
+@media all and (min-width: $screen_md_2 + 1px) {
+    .nav-up {
+        transform: translateY(-100%);
+    }
+
+    .nav-logo-left,
+    .secondary-desktop-nav-bar {
+        // margin: 0 1rem;
+        // transform: translateY(.3em);
+        z-index: 999;
+    }
+
+    .nav-logo-left {
+        display: block;
+        position: fixed;
+        text-align: center;
+        letter-spacing: $logo-text-letter-spacing;
+        font-size: $logo-text-font-size;
+        margin: 0 1rem;
+        transform: translate(0, $nav-logo-left-y);
+        transition: all 0.6s ease-in-out;
+
+        a:hover {
+            color: $theme-light-color;
+        }
+    }
+
+    .secondary-desktop-nav-bar {
+        position: fixed;
+        right: 2em;
+        height: 1.6em;
+        width: 1.6em;
+        border-radius: 2rem;
+        // background: $theme-mobile-bar-bg;
+        background: $desktop-secondary-nav-bar-color-light;
+        box-shadow: $neumorphism-box-shadow;
+        cursor: pointer;
+        transform: translateY(1em);
+        transition: all 1.4s ease-in-out;
+
+        /*
+        // For the animation to go back
+        &::after {
+            position: absolute;
+            transform: translateY(1em);
+            top: .6em;
+            right: 0;
+            color: $theme-font-color;
+            opacity: 0;            
+            content: "Menu Toggle";
+            white-space: nowrap;
+            transition: all .4s;
+            user-select: none;
+            font-size: 1px;
+            font-style: italic;
+        }
+        */
+
+        &:hover {
+            transform: translateY(1em) scale(1.1);
+            transition: transform .2s;
+
+            &::after {
+                // transform: translateY(1em);
+                opacity: .5;
+                font-size: 1.2rem;
+                // transition: all .4s;
+            }
+        }
+
+        &:active {
+            transform: translateY(1.2em) scale(.9);
+            transition: all .6s;
+        }
+    }
+}
+
+// OLD
+header {
+    width: 100%;
+    height: 100vh;
+}
+
+/* .top-nav {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    right: -100vw;
+    z-index: 900;
+    background-color: var(--third-color); */
+/* border-bottom-left-radius: 100%; */
+/* transition: all 800ms cubic-bezier(1, 0, 0, 1);
+    opacity: 0;
+} */
+
+.nav-list,
+.nav-link-container {
+    list-style: none;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media all and (max-width: $screen_md_2) {
+    .nav-link {
+        font-size: 1.8rem;
+        letter-spacing: .1rem;
+
+        p {
+            font-size: 1.2rem;
+        }
+    }
+}
+
+// TODO: Duplicate ???
+.nav-link-container {
+    transform: translateX(.46%);
+
+    @media all and (max-width: $screen_md_2) {
+        flex-direction: column;
+    }
+
+}
+
+.nav-list p {
+    @media all and (max-width: $screen_sm) {
+        font-size: 1.1rem;
+    }
+
+    &.designedby {
+        position: absolute;
+        bottom: 0;
+        margin-bottom: 4rem;
+        font-size: 1.5rem;
+        display: none;
+
+        @media all and (max-width: $screen_md_2) {
+            font-size: 1.1rem;
+            display: block;
+        }
+    }
+}
+
+/* also for contact icon */
+li {
+    margin: 0 .5%;
+
+    @media all and (max-width: $screen_md_2) {
+        margin: 2rem 0;
+    }
+}
+
+.top-nav-list {
+    display: inline-block;
+}
+
+.nav-link {
+    /* font-family: monospace; */
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+    font-size: 1.4rem;
+    padding: .6rem 2rem;
+    color: $theme-font-color;
+
+    @media all and (max-width: $screen_lg) {
+        font-size: 1.8em;
+        padding: 1.2rem;
+    }
+
+    // @media all and (max-width: $screen_md_2) {
+    //     color: $theme-font-color;
+    // }
+
+    @media all and (max-width: $screen_sm) {
+        font-size: 1.2rem;
+        padding: 5% 1rem;
+    }
+
+}
+
+/* animation when hovering nav link */
+/* .nav-link::after {
+    content: '';
+    position: absolute;
+    width: 10%;
+    height: 1rem;
+    background-color: #fff;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    opacity: 1;
+} */
+
+.nav-link:hover,
+.nav-link:focus {
+    /* background: var(--background);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; */
+
+    display: inline;
+    /* text-shadow: -2px 1.5px 2px #000000; */
+    /*  Neumorphism Theme */
+    // text-shadow:
+    //     $theme-light-color 0px 0px 1rem;
+
+    // /* browser support */
+    // -webkit-transition: all .2s ease-in-out;
+    // -moz-transition: all .2s ease-in-out;
+    // -o-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+    color: $theme-color;
+}
+
+/* .nav-link:hover .nav-link::after {
+    opacity: 0;
+} */
+
+.top-nav.open {
+    right: 0;
+    opacity: 1;
+    border-radius: initial;
+}
+
+.toggle-nav-bar {
+    // ...
+    display: none;
+
+    @media all and (max-width: $screen_md_2) {
+        // opacity: 1;
+        display: block;
+    }
+
+    .menu-toggler {
+        position: fixed;
+        top: 3rem;
+        right: 3rem;
+        width: 4rem;
+        height: 3rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        /* cursor: pointer; */
+        z-index: 999;
+        transition: transform 500ms ease-out;
+
+        @media all and (max-width: $screen_sm) {
+            top: 2rem;
+            right: 2rem;
+            width: 3rem;
+            height: 2rem;
+        }
+    }
+}
+
+.menu-toggler.open {
+    transform: rotate(-270deg);
+}
+
+.bar {
+    background: $theme-mobile-bar-color;
+    width: 100%;
+    height: 3px;
+    border-radius: .8rem;
+    // -webkit-box-shadow:
+    //     0px 0px 12px 0px var(--third-color);
+    // -moz-box-shadow:
+    //     0px 0px 12px 0px var(--third-color);
+    box-shadow:
+        0px 0px 12px 0px $theme-dark-color;
+
+    @media all and (max-width: $screen_sm) {
+        height: 2px;
+    }
+}
+
+.bar.half {
+    width: 100%;
+}
+
+.bar.start {
+    width: 60%;
+    align-self: flex-end;
+    transform-origin: right;
+
+    transition: transform 650ms cubic-bezier(0.54, -0.81, 0.57, 0.57);
+}
+
+.open .bar.start {
+    opacity: 0;
+    transition: ease-in-out 650ms;
+    transform: rotate(-450deg) translateX(0rem);
+}
+
+.open .bar.middle {
+    transform: rotate(-630deg);
+    /* opacity: 0;
+    transition: ease-in-out 650ms; */
+}
+
+.bar.end {
+    width: 60%;
+    align-self: flex-end;
+    transform-origin: right;
+
+    transition: transform 650ms cubic-bezier(0.54, -0.81, 0.57, 0.57);
+}
+
+.open .bar.end {
+    opacity: 0;
+    transition: ease-in-out 650ms;
+    transform: rotate(-450deg) translateX(0rem);
+}
+
+.nav-logo {
+    text-align: center;
+    letter-spacing: $logo-text-letter-spacing;
+    font-size: $logo-text-font-size;
+    height: 50%;
+    padding-bottom: 1rem;
+    // user-select: none;
+
+    @media all and (max-width: $screen_md_2) {
+        display: none;
+    }
+
+    a {
+        /* need to find a better font fam */
+        /* font-family: monospace; */
+        font-weight: 100;
+        color: $logo-color;
+    }
+}
+
+
+.top-nav {
+    width: 100%;
+    height: fit-content;
+    position: fixed;
+    padding: 1.2rem 0;
+    /* right: -100vw; */
+    z-index: 900;
+    /* browser support */
+    -webkit-transition: all 800ms cubic-bezier(1, 0, 0, 1);
+    -moz-transition: all 800ms cubic-bezier(1, 0, 0, 1);
+    -o-transition: all 800ms cubic-bezier(1, 0, 0, 1);
+    transition: all 800ms cubic-bezier(1, 0, 0, 1);
+
+    /* for debug */
+    /* background-color: rgba(245, 254, 241, 0.1); */
+
+    @media all and (max-width: $screen_md_2) {
+        height: 100vh;
+        right: -100vw;
+        background: $theme-mobile-bar-bg;
+        /* border-bottom-left-radius: 100%; */
+        /* transition: all 800ms cubic-bezier(1, 0, 0, 1); */
+        opacity: 0;
+        background-size: 200% 200%;
+        animation: mobile-bar-bg-mover 4s ease infinite;
+    }
+}
+
+.startscrolling {
+    /* top: -3rem; */
+    transform: translateY(-50%);
+    background-color: #10212820;
+    /* browser support */
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    transition: all 1s ease;
+}
+
+.scrollup {
+    /* height: 6vh; */
+    background-color: #10212888;
+    transition: all 1s ease;
+}
+
+// For animating the right toggle button (dot) to fade up
+.scroll-down-right-toggle-btn {
+    transform: translate(0, -100%);
+}

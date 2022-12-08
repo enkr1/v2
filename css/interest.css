@@ -1,0 +1,181 @@
+/* main page  */
+/* code below is not working */
+body {
+    /* scroll-snap-type: y mandatory;
+    overflow-y: scroll; */
+    background: url("images/interest-main-img.jpg") no-repeat center fixed; 
+    background-size: cover;
+    /* for loading too long */
+    background-color: #131218;
+    transition: all .5s ease-in-out;
+}
+#interest-header, section {
+    /* scroll-snap-align: start; */
+    /* background-color: #fff; */
+}
+body.interest-body {
+    /* scroll-snap-align: start; */
+
+    /* for loading too long */
+    background-color: #131218;
+    /*  Neumorphism Theme */
+    /* background: var(--background); */
+}
+
+/* Start interest page */
+.svg-beatbox-container p {
+    position: absolute;
+    top: 56%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+#svg-beatboxer {
+    width: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+#svg-beatboxer path:nth-child(2) {
+    stroke-dasharray: 555;
+    stroke-dashoffset: 555;
+    animation: line-anime 4s ease forwards .6s;
+}
+#svg-beatboxer path:nth-child(3) {
+    stroke-dasharray: 555;
+    stroke-dashoffset: 555;
+    animation: line-anime 4s ease forwards .6s;
+}
+#svg-beatboxer path:nth-child(4) {
+    stroke-dasharray: 555;
+    stroke-dashoffset: 555;
+    animation: line-anime 4s ease forwards .6s;
+}
+#svg-beatboxer path:nth-child(5) {
+    stroke-dasharray: 555;
+    stroke-dashoffset: 555;
+    animation: line-anime 4s ease forwards .6s;
+}
+#svg-beatboxer path:nth-child(6) {
+    stroke-dasharray: 555;
+    stroke-dashoffset: 555;
+    animation: line-anime 4s ease forwards .6s;
+}
+#svg-beatboxer path:nth-child(7) {
+    stroke-dasharray: 555;
+    stroke-dashoffset: 555;
+    animation: line-anime 4s ease forwards .6s;
+}
+#svg-beatboxer path:nth-child(8) {
+    stroke-dasharray: 555;
+    stroke-dashoffset: 555;
+    animation: line-anime 4s ease forwards .6s;
+}
+#svg-beatboxer path:nth-child(9) {
+    stroke-dasharray: 555;
+    stroke-dashoffset: 555;
+    animation: line-anime 4s ease forwards .6s;
+}
+#svg-beatboxer path:nth-child(10) {
+    stroke-dasharray: 555;
+    stroke-dashoffset: 555;
+    animation: line-anime 4s ease forwards .6s;
+}
+/* for the N of the coming sooN */
+#svg-beatboxer path:nth-child(11) {
+    stroke-dasharray: 555;
+    stroke-dashoffset: 555;
+    animation: line-anime 4s ease forwards .6s;
+}
+
+/* Start beatbox body */
+.beatbox {
+    height: 100vh;
+}
+
+.countdown {
+    transition: all 1s;
+    font-size: 2.6rem;
+}
+
+/* Start ytbg */
+.example-marquee {
+    position: relative;
+}
+.content {
+    display: table;
+    width: 100%;
+    min-height: 100vh;
+    z-index: 1;
+    position: relative;
+}
+.content .inner {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    padding-left: 16px;
+    padding-right: 16px;
+}
+.content .inner h1 {
+    font-size: 62px;
+    color: white;
+    text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.5);
+}
+.video-background-controls button {
+    font-size: 32px;
+    display: inline-block;
+    padding: 0px;
+    margin: 0px;
+    height: 32px;
+    width: 32px;
+    border-radius: 16px;
+    line-height: 32px;
+    border: none;
+    background: none;
+    -webkit-appearance: none;
+    color: white;
+    filter: drop-shadow(0px 0px 1px black);
+    cursor: pointer;
+    opacity: 1;
+    transition: all 250ms ease-in-out;
+    margin-left: 10px;
+}
+.video-background-controls button:hover {
+    opacity: 0.5;
+}
+iframe {
+    transition: opacity 500ms ease-in-out;
+    transition-delay: 250ms;
+}
+/* End ytbg */
+
+/* End beatbox body */
+
+/* End interest page */
+
+/* tablet */
+@media screen and (max-width: 801px) {
+    #svg-beatboxer {
+        width: 40rem;
+    }
+}
+@media screen and (max-width: 600px) {
+    body.interest-body {
+        background: url("images/interest-main-img-m.jpg") no-repeat center fixed;
+        background-size: cover;
+    }
+    #svg-beatboxer {
+        width: 30rem;
+    }
+    .countdown {
+        font-size: 2rem;
+    }
+}
+
+@media screen and (max-width: 321px) {
+    #svg-beatboxer {
+        width: 26rem;
+    }
+}
+/* main page  */

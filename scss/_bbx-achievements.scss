@@ -1,0 +1,27 @@
+// Start of Achievements of beatboxing
+.bbx-achievements {
+    // ...
+
+    .container {
+        // ...
+
+        .section-heading {
+            // ...
+
+            h1 {
+                &::after {
+                    content: "achivements";
+                    position: absolute;
+                    -webkit-transform: translate(0, 97.5vh);
+                    transform: translate(-50%, -35%);
+                    left: 50%;
+                    opacity: 0.1;
+                    font-size: 3em;
+                }
+            }
+        }
+    }
+
+}
+
+// End of Achievements of beatboxing

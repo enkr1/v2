@@ -1,0 +1,166 @@
+/*Start portfolio*/
+.portfolio {
+    height: fit-content;
+
+    .portfolio-items-swiper {
+        margin: 2rem 0 0;
+
+        .swiper-wrapper {
+            .portfolio-item {
+                // .swiper-slide
+                // margin: 0 1rem;
+
+                .portfolio-img-div {
+
+                    img {
+                        // ...
+                        // width: calc(100vw/3);
+                        height: 40rem;
+                        object-fit: cover;
+                        transition: all .2s ease-in-out;
+                    }
+                }
+
+                h1,
+                p,
+                a {
+                    user-select: none;
+                }
+
+                .portfolio-project_name {
+                    margin: 0;
+                }
+
+                .portfolio-description {
+
+                    .portfolio-category {
+                        margin: 0;
+                        font-size: 1.6rem;
+                        color: $theme-color;
+                        transform: translate(0, -0.4rem);
+                        display: block;
+                    }
+
+                    .cta {
+                        display: inline-block;
+                        margin-top: 1.2rem;
+                        font-size: 1.3rem;
+                        text-transform: uppercase;
+                        color: $theme-light-color;
+
+                        @media all and (max-width: $screen_sm) {
+                            margin-bottom: 2rem;
+                        }
+
+                        &:hover,
+                        &:hover {
+                            color: $theme-color;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// .portfolio-item {
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+//     margin: 10rem 0;
+
+//     @media all and (max-width: $screen_sm) {
+//         align-items: unset !important;
+//         flex-direction: column !important;
+//     }
+// }
+
+// .profile-item:last-child {
+//     margin-bottom: 0;
+// }
+
+// .portfolio-img-div {
+//     flex: 1;
+//     transition: all 2s ease;
+// }
+
+// .portfolio-img-div img {
+//     width: 100%;
+
+//     /*  Neumorphism Theme */
+//     // TODO: Set to variable
+//     box-shadow: 0px 0px 29px -5px rgba(0, 0, 0, 0.5);
+// }
+
+// .portfolio-description {
+//     flex: 1;
+
+//     @media all and (max-width: $screen_md_2) {
+
+//         /* this is the second item  */
+//         &.has-margin-right {
+//             text-align: left;
+//         }
+//     }
+
+//     @media all and (max-width: $screen_sm) {
+//         margin: 0;
+//         order: 2;
+//     }
+
+//     p {
+//         @media all and (max-width: $screen_sm) {
+//             text-align: justify;
+//             text-justify: inter-word;
+//         }
+//     }
+// }
+
+// .portfolio-description h1 {
+//     font-size: 3rem;
+//     font-weight: 300;
+//     margin: 1rem 0;
+// }
+
+// .portfolio-description h6 {
+//     font-size: 1.5rem;
+//     text-transform: uppercase;
+//     font-weight: 300;
+//     opacity: .3;
+// }
+
+// .portfolio-description .cta,
+// .cta {
+//     display: inline-block;
+//     margin-top: 2.5rem;
+//     font-size: 1.5rem;
+//     text-transform: uppercase;
+//     color: $theme-light-color;
+
+//     @media all and (max-width: $screen_sm) {
+//         margin-bottom: 2rem;
+//     }
+// }
+
+// .portfolio-description .cta:hover,
+// .cta:hover {
+//     color: $theme-color;
+// }
+
+// .cta {
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     transition: color 650ms;
+
+//     &.view-more-btn {
+//         box-shadow: $neumorphism-box-shadow;
+//         width: fit-content;
+//         padding: 1rem 2rem;
+//         border-radius: 1rem;
+//         margin: auto;
+//     }
+// }
+
+
+/*End portfolio*/

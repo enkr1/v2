@@ -1,0 +1,121 @@
+/*Start footer*/
+.main-footer {
+    width: 100%;
+    text-align: center;
+    background-color: $theme-dark-color;
+    padding: .5% 0 4rem 0;
+    position: relative;
+
+    @media all and (max-width: $screen_md_1) {
+        padding-bottom: 5rem;
+    }
+
+    @media all and (max-width: $screen_md_2) {
+        padding-bottom: 6.6rem;
+    }
+
+
+    .contact-social-media {
+        margin: 5rem 0;
+
+        ul.contact-social-media-ul {
+            margin: 0 auto 2% auto;
+
+            @media all and (max-width: $screen_md_2) {
+                text-align: center;
+                display: table;
+            }
+
+            li {
+                @media all and (max-width: $screen_md_2) {
+                    display: inline-block;
+                }
+
+                a {
+                    color: $theme-color;
+
+                    @media all and (max-width: $screen_md_2) {
+                        margin: 0 2rem;
+                    }
+
+                    i {
+                        font-size: 3rem;
+                        transition: color 650ms;
+                        margin: 0 1rem;
+
+                        // /*  Neumorphism Theme */
+                        // box-shadow:
+                        //     0px 0px 32px 10px rgba(0, 0, 0, 0.2);
+
+                        @media all and (max-width: $screen_sm) {
+                            font-size: 3rem;
+                            margin: 0 -0.6rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+.up {
+    position: fixed;
+    height: 5rem;
+    width: 5rem;
+    background-color: $theme-light-color;
+    top: 89vh;
+    right: 3%;
+    border-radius: 100%;
+    display: none;
+    cursor: pointer;
+    /* animation: pulse 2s infinite; */
+    z-index: 500;
+
+    /*  Neumorphism Theme */
+    box-shadow:
+        0px 0px 20px -1px rgba(0, 0, 0, 0.4);
+
+    @media all and (max-width: $screen_sm) {
+        height: 4rem;
+        width: 4rem;
+        top: 91vh;
+        right: 5vw;
+    }
+
+    i {
+        color: $theme-dark-color;
+        font-size: 2rem;
+        margin: 1.3rem auto;
+
+        @media all and (max-width: $screen_sm) {
+            font-size: 1.8rem;
+            margin-top: 1rem;
+        }
+
+    }
+}
+
+.up:hover {
+    transform: scale(.95);
+    /* Neumorphism */
+    box-shadow:
+        0px 0px 20px 0px rgba(255, 255, 255, 0.6);
+    transition: all .6s ease-in-out;
+}
+
+
+.main-footer p {
+    letter-spacing: 0.6px;
+    font-size: 1.2rem;
+}
+
+.visitcount {
+    top: 0;
+    margin-top: 1rem;
+    transform: translate(0, 1%);
+    pointer-events: none;
+    display: none;
+}
+
+/*End footer*/

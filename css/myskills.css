@@ -1,0 +1,152 @@
+
+/* Start 3d Skills page*/
+#skills-3d-page {
+    transform: translateY(32%);
+}
+.main-3d-content {
+    width: 10rem;
+    height: 10rem;
+    margin: 30vh auto;
+    perspective: 200rem;
+    /* position: relative; */
+    position: absolute; 
+    z-index: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.content-carrousel {
+    margin-top: 0rem;
+    width: auto; 
+    margin: auto; 
+    animation: fan 120s infinite linear;
+    transform-style: preserve-3d;
+}
+.content-carrousel:hover {
+    /* animation-play-state: paused; */
+    cursor: pointer;
+}
+.content-carrousel figure img {
+    text-align: center;
+    width: 10rem;
+    height: 10rem; 
+    overflow: hidden;
+    position: absolute;
+    z-index: 2; 
+    transition: all 0.5s ease; 
+}
+.content-carrousel figure:hover img {
+    /* transform: scale(1.1);  */
+    transform: scale(.8); 
+}
+.content-carrousel figure svg {
+    position: absolute;
+    width: 13rem;
+    height: 13rem;
+    left: 50%;
+    transform: translate(-50%, -11%);
+    stroke-dasharray: 555;
+    stroke-dashoffset: 555;
+    opacity: 0.6;
+    animation: line-anime-skills 4s ease forwards;
+}
+.content-carrousel figure p {
+    position: absolute;
+    color: var(--pri-color);
+    font-size: 3rem;
+    font-family: monospace;
+    font-weight: 100;
+    bottom: 0;
+    margin: 0;
+    padding: 0; 
+    transform: translate(60%, 340%);
+}
+.content-carrousel figure p .first-p {
+    transition: all 0.1s ease-in-out; 
+    opacity: 0;
+}
+.content-carrousel figure p .sec-p {
+    transition: all 0.4s ease-in-out; 
+    opacity: 0;
+}
+.content-carrousel figure p .third-p {
+    transition: all 0.7s ease-in-out; 
+    opacity: 0;
+}
+.content-carrousel figure:hover .first-p,
+.content-carrousel figure:hover .sec-p,
+.content-carrousel figure:hover .third-p
+{
+    opacity: 1;
+}
+.content-carrousel figure p .first-p { 
+    margin-left: -0.4rem;
+}
+.content-carrousel figure p .sec-p { 
+    margin-left: -1.8rem;
+}
+.content-carrousel figure p .third-p { 
+    margin-left: -1.7rem;
+}
+.content-carrousel figure:nth-child(1) {
+    transform: rotateY(0deg) translateZ(60rem);
+}
+.content-carrousel figure:nth-child(2) {
+    transform: rotateY(36deg) translateZ(60rem);
+}
+.content-carrousel figure:nth-child(3) {
+    transform: rotateY(72deg) translateZ(60rem);
+}
+.content-carrousel figure:nth-child(4) {
+    transform: rotateY(108deg) translateZ(60rem);
+}
+.content-carrousel figure:nth-child(5) {
+    transform: rotateY(144deg) translateZ(60rem);
+}
+.content-carrousel figure:nth-child(6) {
+    transform: rotateY(180deg) translateZ(60rem);
+}
+.content-carrousel figure:nth-child(7) {
+    transform: rotateY(216deg) translateZ(60rem);
+}
+.content-carrousel figure:nth-child(8) {
+    transform: rotateY(252deg) translateZ(60rem);
+}
+.content-carrousel figure:nth-child(9) {
+    transform: rotateY(288deg) translateZ(60rem);
+}
+.content-carrousel figure:nth-child(10) {
+    transform: rotateY(324deg) translateZ(60rem);
+}
+/* End 3d Skills pagr */
+
+/*Start media queries*/
+
+/* tablet */
+@media screen and (max-width: 801px) {
+    .back a img { 
+        top: 2.5rem;  
+    }
+    /* 3d skills page */
+    .main-3d-content {
+        width: 8rem;
+        height: 8rem;
+        perspective: 300rem;
+        margin: 30vh auto 20vh auto;
+    }
+    #skills-3d-page
+    {
+        transform: translateY(0);
+    }
+}
+/* mobile  */
+@media screen and (max-width: 600px) {
+    .back a img {
+        height: 2.3rem;
+        width: 2.5rem;
+        top: 2rem;
+        left: 0.6rem;  
+    }
+}
+/*End media queries*/
+
