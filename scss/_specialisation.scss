@@ -1,12 +1,12 @@
-/*Start Specialization*/
-.specialization {
+/*Start Specialisation*/
+.specialisation {
     // ...
 
     @media only screen and (max-width: $screen_md_1) {
         height: fit-content;
     }
 
-    // TODO: WIP THE NEW DESIGN 
+    // TODO: WIP THE NEW DESIGN
     @media only screen and (min-width: $screen_md_2) {
         overflow: hidden;
 
@@ -21,9 +21,9 @@
                 transform: translate(.6em, -1em);
 
                 &::after {
-                    content: "specialization";
+                    content: "specialisation";
                     position: absolute;
-                    // Using vh as the bottom one might 
+                    // Using vh as the bottom one might
                     // mess up if the screen height changes
                     transform: translate(0, 97.5vh);
                     // transform: translate(0, 3.9em);
@@ -37,10 +37,10 @@
         }
     }
 
-    // TODO: WIP THE NEW DESIGN 
+    // TODO: WIP THE NEW DESIGN
     @media only screen and (min-width: $screen_md_2) {
         .skills-container {
-            // ...    
+            // ...
             height: 100vh;
             transform: translate(0, 30vh);
         }
@@ -114,4 +114,4 @@
     }
 }
 
-/*End Specialization*/
+/*End Specialisation*/

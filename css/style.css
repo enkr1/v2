@@ -1582,12 +1582,12 @@ box-shadow:
 }
 
 /* .profile-img a img:hover {
-    transition: all 0.7s ease; 
-    transform: scale(1.02); 
+    transition: all 0.7s ease;
+    transform: scale(1.02);
 } */
 .about-details {
   /* Green Theme */
-  /* .about-social-media img { 
+  /* .about-social-media img {
   margin: 60% 1rem 0 1rem;
   width: 5rem;
   } */
@@ -1713,19 +1713,19 @@ box-shadow:
     color: $theme-light-color;
 }
 */
-/*Start Specialization*/
+/*Start Specialisation*/
 @media only screen and (max-width: 1024px) {
-  .specialization {
+  .specialisation {
     height: -webkit-fit-content;
     height: -moz-fit-content;
     height: fit-content;
   }
 }
 @media only screen and (min-width: 992px) {
-  .specialization {
+  .specialisation {
     overflow: hidden;
   }
-  .specialization .section-heading {
+  .specialisation .section-heading {
     position: absolute;
     -webkit-user-select: none;
        -moz-user-select: none;
@@ -1733,31 +1733,31 @@ box-shadow:
             user-select: none;
     z-index: -1;
   }
-  .specialization .section-heading h1 {
+  .specialisation .section-heading h1 {
     font-size: 28rem;
     color: rgba(255, 255, 255, 0.15);
     -webkit-transform: translate(0.6em, -1em);
             transform: translate(0.6em, -1em);
   }
-  .specialization .section-heading h1::after {
-    content: "specialization";
+  .specialisation .section-heading h1::after {
+    content: "specialisation";
     position: absolute;
     -webkit-transform: translate(0, 97.5vh);
             transform: translate(0, 97.5vh);
     left: -3em;
   }
-  .specialization .section-heading h6 {
+  .specialisation .section-heading h6 {
     display: none;
   }
 }
 @media only screen and (min-width: 992px) {
-  .specialization .skills-container {
+  .specialisation .skills-container {
     height: 100vh;
     -webkit-transform: translate(0, 30vh);
             transform: translate(0, 30vh);
   }
 }
-.specialization .icon-container {
+.specialisation .icon-container {
   width: 14rem;
   height: 14rem;
   border: 2px solid #9796f0;
@@ -1771,22 +1771,22 @@ box-shadow:
           box-shadow: 0px 0px 22px 0px #dbcde4;
 }
 @media all and (max-width: 992px) {
-  .specialization .icon-container {
+  .specialisation .icon-container {
     font-size: 3.5rem;
   }
 }
-.specialization .icon-container i {
+.specialisation .icon-container i {
   position: relative;
   color: #dbcde4;
   font-size: 5rem;
   margin: auto;
 }
 @media all and (max-width: 768px) {
-  .specialization .icon-container i {
+  .specialisation .icon-container i {
     font-size: 4.5rem;
   }
 }
-.specialization .icon-container::after {
+.specialisation .icon-container::after {
   position: absolute;
   content: '';
   width: 13.1rem;
@@ -1801,14 +1801,14 @@ box-shadow:
           box-shadow: 0px 0px 22px 0px #dbcde4;
   opacity: 0.8;
 }
-.specialization .my-skills {
+.specialisation .my-skills {
   /* https://hankchizljaw.com/wrote/create-a-responsive-grid-layout-with-no-media-queries-using-css-grid/ */
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
   grid-gap: 3rem;
   text-align: center;
 }
-.specialization .my-skills .skill {
+.specialisation .my-skills .skill {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1824,7 +1824,7 @@ box-shadow:
           align-items: center;
   padding: 2rem;
 }
-.specialization .my-skills .skill h1 {
+.specialisation .my-skills .skill h1 {
   font-size: 2rem;
   font-weight: 300;
   text-transform: uppercase;
@@ -1833,7 +1833,7 @@ box-shadow:
   color: #dbcde4;
 }
 
-/*End Specialization*/
+/*End Specialisation*/
 /*Start timeline*/
 .experience {
   height: 100vh;
