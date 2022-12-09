@@ -2,19 +2,19 @@
   {
     "title": "Web Design",
     "sub_title": "Specialised in Graphical User Interface Design.",
-    "description": " Experienced in Adobe Illustrator, Photoshop and Adobe XD for prototype.",
-    "fa": "fa-adobe"
+    "description": "Experienced in Adobe Illustrator, Photoshop and Adobe XD for prototype.",
+    "fa": "fab fa-adobe"
   },
   {
     "title": "Web Development",
     "sub_title": "Experienced in building web portal and web application projects.",
-    "description": " Experienced in Adobe Illustrator, Photoshop and Adobe XD for prototype.",
-    "fa": "fa-adobe"
+    "description": "...",
+    "fa": "fas fa-code"
   },
   {
     "title": "Design",
-    "sub_title": "Qualified in design art as well as sketching, custom design, etc.",
-    "description": " Experienced in Adobe Illustrator, Photoshop and Adobe XD for prototype.",
-    "fa": "fa-adobe"
+    "sub_title": "Certified and qualified in design art as well as sketching, custom design, etc.",
+    "description": "...",
+    "fa": "fas fa-paint-brush"
   }
 ]
