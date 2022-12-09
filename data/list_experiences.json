@@ -1,0 +1,32 @@
+[
+  {
+    "company_title": "Pixium Digital Pte Ltd",
+    "country": "Singapore",
+    "duration": "2021 - Present",
+    "description": "Software engineer"
+  },
+  {
+    "company_title": null,
+    "country": null,
+    "duration": "2020 - 2021",
+    "description": "22 weeks internship programme as a software engineer"
+  },
+  {
+    "company_title": "Singapore Polytechnic",
+    "country": "Singapore",
+    "duration": "2020",
+    "description": "Developed a web application (Digital service & incentive platform) as final year project that was awarded 3rd place in 2020 cohort"
+  },
+  {
+    "company_title": null,
+    "country": null,
+    "duration": "2019 - 2020",
+    "description": "Specialised in data structure algorithm & user interface design"
+  },
+  {
+    "company_title": null,
+    "country": null,
+    "duration": "2018 - 2022",
+    "description": "Diploma in information technology specialised in oftware development"
+  }
+]
