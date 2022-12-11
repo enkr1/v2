@@ -82,9 +82,9 @@
     }
 
     100% {
-        transform: translateY(100vh) rotate(360deg);
+        // Disappear when almost reaching the bottom
+        transform: translateY(110vh) rotate(360deg);
         opacity: 0;
-        /* opacity: 1; */
         stroke-dashoffset: 0;
     }
 }

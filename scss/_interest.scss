@@ -24,7 +24,6 @@ body.interest-body {
 }
 
 #svg-beatbox {
-    width: auto;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -41,7 +40,7 @@ body.interest-body {
         width: 40em;
     }
 
-    // mobile 
+    // mobile
     @media all and (max-width: $screen_xs) {
         width: 30em;
     }
