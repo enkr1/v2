@@ -853,7 +853,7 @@ span {
         top: .6em;
         right: 0;
         color: $theme-font-color;
-        opacity: 0;            
+        opacity: 0;
         content: "Menu Toggle";
         white-space: nowrap;
         transition: all .4s;
@@ -914,15 +914,6 @@ header {
           align-items: center;
 }
 
-@media all and (max-width: 992px) {
-  .nav-link {
-    font-size: 1.8rem;
-    letter-spacing: .1rem;
-  }
-  .nav-link p {
-    font-size: 1.2rem;
-  }
-}
 .nav-link-container {
   -webkit-transform: translateX(0.46%);
           transform: translateX(0.46%);
@@ -979,7 +970,6 @@ li {
 }
 @media all and (max-width: 1281px) {
   .nav-link {
-    font-size: 1.8em;
     padding: 1.2rem;
   }
 }

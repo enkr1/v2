@@ -1,11 +1,11 @@
 // NEW
-// Navigation bar 
+// Navigation bar
 // ONLY AVAILABLE ON WEB
 .nav-logo-left {
     display: none;
 }
 
-@media all and (min-width: $screen_md_2 + 1px) {
+@media all and (min-width: ($screen_md_2 + 1px)) {
     .nav-up {
         transform: translateY(-100%);
     }
@@ -53,7 +53,7 @@
             top: .6em;
             right: 0;
             color: $theme-font-color;
-            opacity: 0;            
+            opacity: 0;
             content: "Menu Toggle";
             white-space: nowrap;
             transition: all .4s;
@@ -110,16 +110,6 @@ header {
     align-items: center;
 }
 
-@media all and (max-width: $screen_md_2) {
-    .nav-link {
-        font-size: 1.8rem;
-        letter-spacing: .1rem;
-
-        p {
-            font-size: 1.2rem;
-        }
-    }
-}
 
 // TODO: Duplicate ???
 .nav-link-container {
@@ -172,13 +162,13 @@ li {
     color: $theme-font-color;
 
     @media all and (max-width: $screen_lg) {
-        font-size: 1.8em;
         padding: 1.2rem;
     }
 
-    // @media all and (max-width: $screen_md_2) {
-    //     color: $theme-font-color;
-    // }
+    @media all and (max-width: $screen_md_2) {
+        // font-size: 1.8rem;
+        // letter-spacing: .1rem;
+    }
 
     @media all and (max-width: $screen_sm) {
         font-size: 1.2rem;
