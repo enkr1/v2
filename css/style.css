@@ -959,7 +959,7 @@ header {
   }
 }
 .nav-list .nav-link-container .nav-link.active {
-  border: 1px solid #999;
+  border: 1px solid #b7b7b7;
 }
 .nav-list .nav-link-container .nav-link:hover,
 .nav-list .nav-link-container .nav-link:focus {
@@ -1157,7 +1157,6 @@ li {
   -webkit-transition: all 800ms cubic-bezier(1, 0, 0, 1);
   transition: all 800ms cubic-bezier(1, 0, 0, 1);
   /* for debug */
-  /* background-color: rgba(245, 254, 241, 0.1); */
 }
 @media all and (max-width: 992px) {
   .top-nav {
@@ -1174,9 +1173,8 @@ li {
 }
 
 .startscrolling {
-  /* top: -3rem; */
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
+  -webkit-transform: translateY(-47%);
+          transform: translateY(-47%);
   background-color: #10212820;
   /* browser support */
   -webkit-transition: all 1s ease;

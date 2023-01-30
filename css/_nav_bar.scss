@@ -125,7 +125,6 @@ header {
             letter-spacing: .2rem;
             font-size: 1.3rem;
             padding: .6rem 2rem;
-
             color: $theme-font-color;
 
             @media all and (max-width: $screen_lg) {
@@ -142,8 +141,9 @@ header {
                 padding: 5% 1rem;
             }
 
+            // TODO: Add cool border animation like joining the string.
             &.active {
-                border: 1px solid #999;
+                border: 1px solid $theme-light-color;
             }
         }
 
@@ -352,7 +352,7 @@ li {
     transition: all 800ms cubic-bezier(1, 0, 0, 1);
 
     /* for debug */
-    /* background-color: rgba(245, 254, 241, 0.1); */
+    // background-color: rgba(245, 254, 241, 0.1);
 
     @media all and (max-width: $screen_md_2) {
         height: 100vh;
@@ -367,8 +367,8 @@ li {
 }
 
 .startscrolling {
-    /* top: -3rem; */
-    transform: translateY(-50%);
+    // From 50 to 47 cuz border for active item.
+    transform: translateY(-47%);
     background-color: #10212820;
     /* browser support */
     -webkit-transition: all 1s ease;
