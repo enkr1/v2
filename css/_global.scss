@@ -173,14 +173,14 @@ img {
 #_progress {
     transform: translateY(7.9rem);
     --scroll: 0%;
+    /* in js */
     background: linear-gradient(to right,
             $theme-color var(--scroll),
-            /* in js */
             transparent 0);
     position: fixed;
     width: 100%;
     height: 1.5px;
-    top: 0px;
+    top: -2px;
     z-index: 100;
 
     @media all and (max-width: $screen_md_2) {

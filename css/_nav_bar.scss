@@ -37,13 +37,13 @@
         right: 2em;
         height: 1.6em;
         width: 1.6em;
-        border-radius: 2rem;
+        border-radius: .4rem;
         // background: $theme-mobile-bar-bg;
         background: $desktop-secondary-nav-bar-color-light;
         box-shadow: $neumorphism-box-shadow;
         cursor: pointer;
         transform: translateY(1em);
-        transition: all 1.4s ease-in-out;
+        transition: transform 1.4s ease-in-out;
 
         /*
         // For the animation to go back
@@ -110,36 +110,100 @@ header {
     align-items: center;
 }
 
+.nav-list {
 
-// TODO: Duplicate ???
-.nav-link-container {
-    transform: translateX(.46%);
-
-    @media all and (max-width: $screen_md_2) {
-        flex-direction: column;
-    }
-
-}
-
-.nav-list p {
-    @media all and (max-width: $screen_sm) {
-        font-size: 1.1rem;
-    }
-
-    &.designedby {
-        position: absolute;
-        bottom: 0;
-        margin-bottom: 4rem;
-        font-size: 1.5rem;
-        display: none;
+    .nav-link-container {
+        transform: translateX(.46%);
 
         @media all and (max-width: $screen_md_2) {
+            flex-direction: column;
+        }
+
+        .nav-link {
+            /* font-family: monospace; */
+            text-transform: uppercase;
+            letter-spacing: .2rem;
+            font-size: 1.3rem;
+            padding: .6rem 2rem;
+
+            color: $theme-font-color;
+
+            @media all and (max-width: $screen_lg) {
+                padding: 1.2rem;
+            }
+
+            @media all and (max-width: $screen_md_2) {
+                // font-size: 1.8rem;
+                // letter-spacing: .1rem;
+            }
+
+            @media all and (max-width: $screen_sm) {
+                font-size: 1.2rem;
+                padding: 5% 1rem;
+            }
+
+            &.active {
+                border: 1px solid #999;
+            }
+        }
+
+        /* animation when hovering nav link */
+        /* .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 10%;
+            height: 1rem;
+            background-color: #fff;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            top: 0;
+            opacity: 1;
+        } */
+
+        .nav-link:hover,
+        .nav-link:focus {
+            /* background: var(--background);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent; */
+
+            display: inline;
+            /* text-shadow: -2px 1.5px 2px #000000; */
+            /*  Neumorphism Theme */
+            // text-shadow:
+            //     $theme-light-color 0px 0px 1rem;
+
+            // /* browser support */
+            // -webkit-transition: all .2s ease-in-out;
+            // -moz-transition: all .2s ease-in-out;
+            // -o-transition: all .2s ease-in-out;
+            transition: all .2s ease-in-out;
+            color: $theme-color;
+        }
+
+    }
+
+    p {
+        @media all and (max-width: $screen_sm) {
             font-size: 1.1rem;
-            display: block;
+        }
+
+        &.designedby {
+            position: absolute;
+            bottom: 0;
+            margin-bottom: 4rem;
+            font-size: 1.5rem;
+            display: none;
+
+            @media all and (max-width: $screen_md_2) {
+                font-size: 1.1rem;
+                display: block;
+            }
         }
     }
 }
 
+// TODO: Simplify
 /* also for contact icon */
 li {
     margin: 0 .5%;
@@ -151,65 +215,6 @@ li {
 
 .top-nav-list {
     display: inline-block;
-}
-
-.nav-link {
-    /* font-family: monospace; */
-    text-transform: uppercase;
-    letter-spacing: .2rem;
-    font-size: 1.3rem;
-    padding: .6rem 2rem;
-
-    color: $theme-font-color;
-
-    @media all and (max-width: $screen_lg) {
-        padding: 1.2rem;
-    }
-
-    @media all and (max-width: $screen_md_2) {
-        // font-size: 1.8rem;
-        // letter-spacing: .1rem;
-    }
-
-    @media all and (max-width: $screen_sm) {
-        font-size: 1.2rem;
-        padding: 5% 1rem;
-    }
-
-}
-
-/* animation when hovering nav link */
-/* .nav-link::after {
-    content: '';
-    position: absolute;
-    width: 10%;
-    height: 1rem;
-    background-color: #fff;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    top: 0;
-    opacity: 1;
-} */
-
-.nav-link:hover,
-.nav-link:focus {
-    /* background: var(--background);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent; */
-
-    display: inline;
-    /* text-shadow: -2px 1.5px 2px #000000; */
-    /*  Neumorphism Theme */
-    // text-shadow:
-    //     $theme-light-color 0px 0px 1rem;
-
-    // /* browser support */
-    // -webkit-transition: all .2s ease-in-out;
-    // -moz-transition: all .2s ease-in-out;
-    // -o-transition: all .2s ease-in-out;
-    transition: all .2s ease-in-out;
-    color: $theme-color;
 }
 
 /* .nav-link:hover .nav-link::after {

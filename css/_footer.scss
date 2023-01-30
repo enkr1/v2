@@ -63,18 +63,19 @@
     position: fixed;
     height: 5rem;
     width: 5rem;
-    background-color: $theme-light-color;
+    // background-color: $theme-light-color;
     top: 89vh;
     right: 3%;
-    border-radius: 100%;
+    border-radius: 1rem;
     display: none;
     cursor: pointer;
     /* animation: pulse 2s infinite; */
     z-index: 500;
+    border: 1px solid $theme-light-color;
 
-    /*  Neumorphism Theme */
+    /* Neumorphism Theme */
     box-shadow:
-        0px 0px 20px -1px rgba(0, 0, 0, 0.4);
+        0px 0px 20px -1px rgba(255, 255, 255, 0.2);
 
     @media all and (max-width: $screen_sm) {
         height: 4rem;
@@ -83,8 +84,16 @@
         right: 5vw;
     }
 
+    &:hover {
+        transform: scale(.95);
+        /* Neumorphism */
+        box-shadow:
+            0px 0px 20px 0px rgba(255, 255, 255, 0.3);
+        transition: all .6s ease-in-out;
+    }
+
     i {
-        color: $theme-dark-color;
+        color: $theme-light-color;
         font-size: 2rem;
         margin: 1.3rem auto;
 
@@ -96,13 +105,6 @@
     }
 }
 
-.up:hover {
-    transform: scale(.95);
-    /* Neumorphism */
-    box-shadow:
-        0px 0px 20px 0px rgba(255, 255, 255, 0.6);
-    transition: all .6s ease-in-out;
-}
 
 
 .main-footer p {

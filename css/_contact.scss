@@ -1,13 +1,9 @@
 /*Start contact*/
 /* interactive anim, exp */
 .contact {
-    // background-color: $theme-dark-color;
     margin: 0 !important;
-    /*  Neumorphism Theme */
-    // border-top-left-radius: 3rem;
-    // border-top-right-radius: 3rem;
-    // box-shadow: 0px 0px 3rem -1rem $theme-color;
-    height: fit-content;
+    height: 100%;
+    padding: 8% 0 3%;
 
     // As the # might change location too
     @media all and (max-width: $screen_sm) {
@@ -17,9 +13,13 @@
     }
 
     .container {
+        display: block;
         padding-top: 4rem;
         box-shadow: $neumorphism-box-shadow;
         border-radius: 3rem;
+        border: 1px solid #999;
+        height: 80%;
+        margin: auto;
 
         @media all and (max-width: $screen_sm) {
             max-width: 90vw;
@@ -82,7 +82,7 @@
             }
 
 
-            // 
+            //
         }
     }
 }
@@ -231,7 +231,7 @@ input.contact-submit-btn:hover {
     // box-shadow: unset;
 }
 
-// USE FOR CONTACT 
+// USE FOR CONTACT
 
 .bg-slide-to-top {
     background: linear-gradient(to right, $theme-light-color 50%, rgba(255, 255, 255, 0) 50%);
