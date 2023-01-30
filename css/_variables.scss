@@ -13,15 +13,22 @@ $screen_xs: 480px;
 $screen_xxs: 320px;
 
 // sec-color
-$theme-color: #9796f0; // OLD A8CABA / 9796f0
+// OLD: A8CABA / 9796f0
+$theme-color: #4b4b4b;
+
 // pri-color
-$theme-light-color: #dbcde4; // OLD rgb(255, 255, 255)
+// OLD: dbcde4
+$theme-light-color: #b7b7b7; // OLD rgb(255, 255, 255)
+
 // third-color
-$theme-dark-color: #312449; // OLD 44415d
+// OLD: 312449
+$theme-dark-color: #000000; // OLD 44415d
 
 // --- Text scheme ---
 // main-p-color
-$theme-font-color: #dedef5; // OLD ddfff8
+// OLD ddfff8 / dedef5
+$theme-font-color: #d8d8d8;
+
 //#BE93C5
 $theme-h1-color: rgba(255, 255, 255, 0.15);
 

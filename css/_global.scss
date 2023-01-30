@@ -11,18 +11,27 @@
     background-color: $theme-light-color;
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
 html {
     font-size: 62.5%;
-    font-family: 'Alegreya Sans', sans-serif;
-    font-family: 'Anonymous Pro', monospace;
-    font-family: 'Overpass Mono', monospace;
-    font-family: 'Radley', serif;
-    font-family: 'K2D', sans-serif;
+
+    // 2022
+    // font-family: 'Alegreya Sans', sans-serif;
+    // font-family: 'Anonymous Pro', monospace;
+    // font-family: 'Overpass Mono', monospace;
+    // font-family: 'Radley', serif;
+    // font-family: 'K2D', sans-serif;
+
     /* font-family: 'Roboto', sans-serif; */
     /* font-family: 'Roboto Mono', monospace;
     font-family: 'Heebo', sans-serif;
     font-family: 'Source Serif Pro', serif;
     font-family: 'Philosopher', sans-serif; */
+
+    // font-family: monospace;
+    font-family: 'Roboto Mono', monospace;
+
     color: $theme-font-color;
     overflow-x: hidden;
     overflow-y: hidden;
@@ -110,7 +119,7 @@ a {
 
 /* all p/fonts */
 p {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     font-weight: 100;
     line-height: 1.6;
     word-spacing: 0.2rem;

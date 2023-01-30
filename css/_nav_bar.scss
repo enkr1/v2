@@ -156,9 +156,10 @@ li {
 .nav-link {
     /* font-family: monospace; */
     text-transform: uppercase;
-    letter-spacing: .1rem;
-    font-size: 1.4rem;
+    letter-spacing: .2rem;
+    font-size: 1.3rem;
     padding: .6rem 2rem;
+
     color: $theme-font-color;
 
     @media all and (max-width: $screen_lg) {
@@ -373,7 +374,7 @@ li {
 
 .scrollup {
     /* height: 6vh; */
-    background-color: #10212888;
+    background-color: #64646488;
     transition: all 1s ease;
 }
 
