@@ -59,14 +59,15 @@
 
 }
 
+$size-up-btn: 4rem;
+
 .up {
     position: fixed;
-    height: 5rem;
-    width: 5rem;
-    // background-color: $theme-light-color;
+    height: $size-up-btn;
+    width: $size-up-btn;
     top: 89vh;
     right: 3%;
-    border-radius: 1rem;
+    // border-radius: 1rem;
     display: none;
     cursor: pointer;
     /* animation: pulse 2s infinite; */
@@ -94,14 +95,12 @@
 
     i {
         color: $theme-light-color;
-        font-size: 2rem;
-        margin: 1.3rem auto;
+        font-size: 1.8rem;
+        transform: translateY(50%);
 
         @media all and (max-width: $screen_sm) {
             font-size: 1.8rem;
-            margin-top: 1rem;
         }
-
     }
 }
 

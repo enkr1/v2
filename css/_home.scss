@@ -67,7 +67,6 @@
         width: 100%;
         height: 100%;
         transform: translateY(28em);
-        /* opacity: .8; */
 
         @media all and (max-width: $screen_sm) {
             transform: translateY(300%);
@@ -78,19 +77,9 @@
         .action-btn {
             height: 3rem;
             width: $action-btn-width;
-            /* border: 1px solid var(--pri-color); */
-            border-radius: 3rem;
+            border: 1px solid $theme-light-color;
             margin: .4% 1.4%;
             box-shadow: $neumorphism-box-shadow;
-            /* Neumorphism */
-            /* -webkit-box-shadow: 
-        0px 0px 10px 0px var(--pri-color);
-    -moz-box-shadow: 
-        0px 0px 10px 0px var(--pri-color);
-    box-shadow: 
-        0px 0px 10px 0px var(--pri-color); */
-
-
 
             @media all and (max-width: $screen_md_1) {
                 width: 14%;
@@ -106,6 +95,7 @@
             p {
                 transform: translateY(.34rem);
                 font-size: 1.3rem;
+                font-weight: 400;
                 letter-spacing: .1rem;
                 color: $theme-font-color;
                 text-transform: uppercase;
@@ -128,7 +118,7 @@
 
             }
 
-            @media all and (min-width: $screen_md_2 + 1px) {
+            @media all and (min-width: $screen_md_2) {
 
                 /* explore button */
                 &.explore-btn {
@@ -154,9 +144,7 @@
                     }
 
                     &:hover {
-                        // width: 3rem !important;
-                        // padding: 0 3rem;
-                        // box-shadow: unset !important;
+                        border: unset;
 
                         .action-text-2 {
                             opacity: 0;
@@ -168,16 +156,15 @@
                             box-shadow: unset;
                             width: 3rem;
                             height: 5rem;
-                            border: 2px solid $media-icon-color;
+                            border: 1px solid $media-icon-color;
                             border-radius: 2rem;
                             box-sizing: border-box;
-                            // transition: all .6s;
 
                             &::before {
                                 content: '';
                                 position: absolute;
-                                width: .6rem;
-                                height: .6rem;
+                                width: .5rem;
+                                height: .5rem;
                                 left: 50%;
                                 margin-left: -.3rem;
                                 background-color: $media-icon-color;
@@ -204,15 +191,16 @@
     transition: all .5s ease-in-out;
 }
 
-.bg-slide-to-right:hover {
-    background-position: left bottom;
-}
-
-.bg-slide-to-right:hover .action-text-1 {
-    z-index: 1;
-    color: $theme-dark-color !important;
-    transition: all .1s ease-in-out !important;
-}
+// TODO: Think of a better animation for these 2 btns
+// .bg-slide-to-right:hover {
+//     background-position: left bottom;
+// }
+//
+// .bg-slide-to-right:hover .action-text-1 {
+//     z-index: 1;
+//     color: $theme-dark-color !important;
+//     transition: all .1s ease-in-out !important;
+// }
 
 /* portfolio button */
 .bg-slide-to-left {
@@ -222,12 +210,13 @@
     transition: all .5s ease-in-out;
 }
 
-.bg-slide-to-left:hover {
-    background-position: right bottom;
-}
-
-.bg-slide-to-left:hover .action-text-3 {
-    z-index: 1;
-    color: $theme-dark-color !important;
-    transition: all .1s ease-in-out !important;
-}
+// .bg-slide-to-left:hover {
+//     background-position: right bottom;
+// }
+//
+// .bg-slide-to-left:hover .action-text-3 {
+//     z-index: 1;
+//     color: $theme-dark-color !important;
+//     transition: all .1s ease-in-out !important;
+//     font-weight: 500;
+// }

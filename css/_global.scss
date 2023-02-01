@@ -1,9 +1,13 @@
 /*Start global*/
 /* https://stackoverflow.com/questions/3468154/what-is-webkit-and-how-is-it-related-to-css */
 * {
+
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+
+    // Not show cursor for the cursor eye candy
+    // cursor: none;
 }
 
 *::selection {
@@ -11,6 +15,7 @@
     background-color: $theme-light-color;
 }
 
+// REF: https://fonts.google.com/specimen/Roboto+Mono
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
 
 html {
@@ -107,13 +112,15 @@ h6 {
 }
 
 /* all links */
+// TODO: Better colour
 a {
     text-decoration: none;
-    color: $theme-light-color;
+    color: $theme-color;
     transition: all .2s ease-in-out;
+    font-weight: 500;
 
     &:hover {
-        color: $theme-dark-color;
+        // color: $theme-light-color;
     }
 }
 
@@ -348,7 +355,6 @@ span {
     /* transition: all 0.1s ease; */
     box-shadow:
         0px 0px 22px 0px $theme-light-color;
-
     backdrop-filter: sepia(100%);
 
     /* backdrop-filter: invert(30%); */
