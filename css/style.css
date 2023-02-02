@@ -2543,3 +2543,274 @@ iframe {
 .resume-body .resume-container .profile-section .detail-section .desc {
   font-size: 1.3rem;
 }
+
+#platform-page {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding: 3% 0 10%;
+}
+#platform-page .elixir-pipe-style::before {
+  content: "|>";
+  padding: 0 .6rem 0 0;
+  color: #fff;
+}
+#platform-page p {
+  letter-spacing: unset;
+  word-spacing: unset;
+}
+#platform-page #profile-section {
+  position: relative;
+}
+#platform-page #profile-section .profile-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 2rem 0;
+  background-color: rgba(255, 255, 255, 0);
+}
+@-webkit-keyframes profileAnim {
+  100% {
+    -webkit-transform: translate(0, -2px) scale(1.1);
+            transform: translate(0, -2px) scale(1.1);
+  }
+}
+@keyframes profileAnim {
+  100% {
+    -webkit-transform: translate(0, -2px) scale(1.1);
+            transform: translate(0, -2px) scale(1.1);
+  }
+}
+#platform-page #profile-section .profile-container::before {
+  content: "";
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.4);
+  border-radius: 100%;
+  height: 10rem;
+  width: 10rem;
+  z-index: -1;
+}
+#platform-page #profile-section .profile-container::before {
+  -webkit-transform: translate(0, -2px);
+          transform: translate(0, -2px);
+  -webkit-animation: profileAnim 1s infinite alternate;
+          animation: profileAnim 1s infinite alternate;
+}
+#platform-page #profile-section .profile-container img {
+  height: 10rem;
+  width: 10rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 100%;
+}
+#platform-page #profile-section .al-container {
+  width: 50vw;
+  margin: 0 auto 2rem;
+}
+@media screen and (max-width: 768px) {
+  #platform-page #profile-section .al-container {
+    width: 80%;
+  }
+}
+@media screen and (max-width: 480px) {
+  #platform-page #profile-section .al-container {
+    width: 85%;
+  }
+}
+#platform-page #profile-section .al-container h1.achievement-title.collapsible {
+  text-align: center;
+  cursor: pointer;
+}
+@media screen and (max-width: 768px) {
+  #platform-page #profile-section .al-container h1.achievement-title.collapsible {
+    font-size: 1.7rem;
+  }
+}
+@media screen and (max-width: 480px) {
+  #platform-page #profile-section .al-container h1.achievement-title.collapsible {
+    font-size: 1.6rem;
+  }
+}
+#platform-page #profile-section .al-container h1.achievement-title.collapsible::before {
+  content: ">";
+  padding: 0 .8rem 0 0;
+}
+#platform-page #profile-section .al-container h1.achievement-title.collapsible.active::before {
+  content: "_";
+}
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+#platform-page #profile-section .al-container .list-container {
+  opacity: 0;
+  display: none;
+  background-color: rgba(255, 255, 255, 0.1);
+  -webkit-transition: all .6s ease-in-out;
+  transition: all .6s ease-in-out;
+}
+#platform-page #profile-section .al-container .list-container.fade-in {
+  display: block;
+  margin-top: 1rem;
+  -webkit-animation: fadeIn 2s forwards;
+          animation: fadeIn 2s forwards;
+}
+#platform-page #profile-section .al-container .list-container .category-container {
+  position: relative;
+  padding: 0 1rem 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1rem;
+}
+#platform-page #profile-section .al-container .list-container .category-container:not(:last-child) {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+#platform-page #profile-section .al-container .list-container .category-container h2 {
+  color: #fff;
+  top: 0;
+  left: 0;
+  font-size: 1.5rem;
+  opacity: .5;
+  -webkit-transform: translate(0, 35%);
+          transform: translate(0, 35%);
+}
+@media screen and (max-width: 768px) {
+  #platform-page #profile-section .al-container .list-container .category-container h2 {
+    font-size: 1.4rem;
+  }
+}
+@media screen and (max-width: 480px) {
+  #platform-page #profile-section .al-container .list-container .category-container h2 {
+    font-size: 1.3rem;
+  }
+}
+#platform-page #profile-section .al-container .list-container .category-container .title-list-container {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+#platform-page #profile-section .al-container .list-container .category-container .title-list-container p.al-title {
+  color: #b7b7b7;
+  font-size: 1.4rem;
+}
+@media screen and (max-width: 768px) {
+  #platform-page #profile-section .al-container .list-container .category-container .title-list-container p.al-title {
+    font-size: 1.3rem;
+  }
+}
+@media screen and (max-width: 480px) {
+  #platform-page #profile-section .al-container .list-container .category-container .title-list-container p.al-title {
+    font-size: 1.2rem;
+  }
+}
+#platform-page #platform-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 2rem;
+  z-index: 2;
+}
+#platform-page #platform-section .single-button {
+  background-color: rgba(0, 0, 0, 0.2);
+  text-align: center;
+  height: -moz-max-content;
+  height: -webkit-fit-content !important;
+  height: -moz-fit-content !important;
+  height: fit-content !important;
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+  width: 80vw;
+  padding: .4rem 1.2rem;
+}
+@media screen and (max-width: 480px) {
+  #platform-page #platform-section .single-button {
+    width: 85vw;
+  }
+}
+#platform-page #platform-section .single-button:hover {
+  -webkit-transform: scale(0.99);
+          transform: scale(0.99);
+  background-color: rgba(255, 255, 255, 0.8);
+}
+#platform-page #platform-section .single-button:hover a span,
+#platform-page #platform-section .single-button:hover ::before {
+  color: #000;
+  font-weight: bold;
+}
+#platform-page #platform-section .single-button a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  height: 3.4rem;
+}
+#platform-page #platform-section .single-button a span {
+  color: #fff;
+  font-size: 1.4rem;
+}
+@media screen and (max-width: 768px) {
+  #platform-page #platform-section .single-button a span {
+    font-size: 1.3rem;
+  }
+}
+@media screen and (max-width: 480px) {
+  #platform-page #platform-section .single-button a span {
+    font-size: 1.3rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  #platform-page #platform-section .single-button a {
+    height: 3rem;
+  }
+}
+#platform-page #platform-section .single-button a:active {
+  outline: none;
+}
+#platform-page #platform-section .single-button a:focus:not(:focus-visible) {
+  outline: none;
+}
+#platform-page #platform-section .single-button a:focus-visible {
+  outline: revert;
+}

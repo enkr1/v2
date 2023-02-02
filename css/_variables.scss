@@ -40,6 +40,13 @@ $logo-color: $theme-light-color;
 $logo-text-font-size: 2rem;
 $logo-text-letter-spacing: .6rem;
 
+
+// TODO: Refactor, separate colours, fs, etc.
+
+$default_global_font_size: 1.2rem;
+$sm_global_font_size: 1.15rem;
+$xs_global_font_size: 1.1rem;
+
 $media-icon-color: #e0e0f7;
 
 // https://css-tricks.com/almanac/properties/b/box-shadow/
