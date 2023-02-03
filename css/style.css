@@ -2554,14 +2554,15 @@ iframe {
   height: fit-content;
   padding: 3% 0 10%;
 }
-#platform-page .elixir-pipe-style::before {
-  content: "|>";
-  padding: 0 .6rem 0 0;
+#platform-page h2,
+#platform-page p,
+#platform-page span {
   color: #fff;
-}
-#platform-page p {
   letter-spacing: unset;
   word-spacing: unset;
+}
+#platform-page span:nth-child(1) {
+  letter-spacing: -2px;
 }
 #platform-page #profile-section {
   position: relative;
@@ -2630,6 +2631,10 @@ iframe {
 #platform-page #profile-section .al-container h1.achievement-title.collapsible {
   text-align: center;
   cursor: pointer;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: auto;
 }
 @media screen and (max-width: 768px) {
   #platform-page #profile-section .al-container h1.achievement-title.collapsible {
@@ -2693,7 +2698,6 @@ iframe {
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 #platform-page #profile-section .al-container .list-container .category-container h2 {
-  color: #fff;
   top: 0;
   left: 0;
   font-size: 1.5rem;
@@ -2719,6 +2723,9 @@ iframe {
 #platform-page #profile-section .al-container .list-container .category-container .title-list-container p.al-title {
   color: #b7b7b7;
   font-size: 1.4rem;
+}
+#platform-page #profile-section .al-container .list-container .category-container .title-list-container p.al-title span:nth-child(2) {
+  letter-spacing: .1rem;
 }
 @media screen and (max-width: 768px) {
   #platform-page #profile-section .al-container .list-container .category-container .title-list-container p.al-title {
@@ -2758,6 +2765,7 @@ iframe {
   transition: all .3s ease-in-out;
   width: 80vw;
   padding: .4rem 1.2rem;
+  border: 1px solid transparent;
 }
 @media screen and (max-width: 480px) {
   #platform-page #platform-section .single-button {
@@ -2767,11 +2775,10 @@ iframe {
 #platform-page #platform-section .single-button:hover {
   -webkit-transform: scale(0.99);
           transform: scale(0.99);
-  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid #b7b7b7;
 }
 #platform-page #platform-section .single-button:hover a span,
 #platform-page #platform-section .single-button:hover ::before {
-  color: #000;
   font-weight: bold;
 }
 #platform-page #platform-section .single-button a {
@@ -2787,7 +2794,6 @@ iframe {
   height: 3.4rem;
 }
 #platform-page #platform-section .single-button a span {
-  color: #fff;
   font-size: 1.4rem;
 }
 @media screen and (max-width: 768px) {

@@ -17,17 +17,17 @@
   height: fit-content;
   padding: 3% 0 10%;
 
-  .elixir-pipe-style {
-    &::before {
-      content: "|>";
-      padding: 0 .6rem 0 0;
-      color: #fff;
-    }
-  }
-
-  p {
+  h2,
+  p,
+  span {
+    color: $font-color-platform;
     letter-spacing: unset;
     word-spacing: unset;
+  }
+
+  // Elixir style - Modification needed when style changed
+  span:nth-child(1) {
+    letter-spacing: -2px;
   }
 
   #profile-section {
@@ -98,6 +98,8 @@
       h1.achievement-title.collapsible {
         text-align: center;
         cursor: pointer;
+        width: fit-content;
+        margin: auto;
 
         @media screen and (max-width: $screen_sm) {
           font-size: 1.7rem;
@@ -153,7 +155,6 @@
           }
 
           h2 {
-            color: $font-color-platform;
             top: 0;
             left: 0;
             font-size: $font-size-al-title-xl;
@@ -175,6 +176,10 @@
             p.al-title {
               color: $theme-light-color;
               font-size: $font-size-al-p-xl;
+
+              span:nth-child(2) {
+                letter-spacing: .1rem;
+              }
 
               @media screen and (max-width: $screen_sm) {
                 font-size: $font-size-al-p-sm;
@@ -207,6 +212,7 @@
       transition: all .3s ease-in-out;
       width: 80vw;
       padding: .4rem 1.2rem;
+      border: 1px solid transparent;
 
       // @media screen and (max-width: $screen_sm) {
       //     width: 80vw;
@@ -222,11 +228,12 @@
 
       &:hover {
         transform: scale(.99);
-        background-color: rgba(255, 255, 255, 0.8);
+        // background-color: rgba(255, 255, 255, 0.8);
+        border: 1px solid $theme-light-color;
 
         a span,
         ::before {
-          color: #000;
+          // color: #000;
           font-weight: bold;
         }
       }
@@ -240,7 +247,6 @@
         // text-transform: uppercase;
 
         span {
-          color: $font-color-platform;
           font-size: $font-size-platforms-p-xl;
 
           @media screen and (max-width: $screen_sm) {
