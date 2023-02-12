@@ -427,7 +427,7 @@ img {
 /* width */
 ::-webkit-scrollbar {
   /* display: none; */
-  width: .2rem;
+  width: .3rem;
 }
 
 /* Track */
@@ -1541,7 +1541,7 @@ li {
 .about .container .window.window-right h1,
 .about .container .window.window-right h2 {
   color: black;
-  margin: 0 0 .8rem;
+  margin: 1rem 0 .8rem;
   font-size: 2rem;
   text-transform: uppercase;
 }
