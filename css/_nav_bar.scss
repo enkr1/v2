@@ -112,6 +112,7 @@ header {
             font-size: 1.3rem;
             padding: .6rem 2rem;
             color: $theme-font-color;
+            border: 1px solid transparent;
 
             @media all and (max-width: $screen_lg) {
                 padding: 1.2rem;

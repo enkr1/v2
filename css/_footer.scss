@@ -62,6 +62,7 @@
 $size-up-btn: 4rem;
 
 .up {
+    mix-blend-mode: difference;
     position: fixed;
     height: $size-up-btn;
     width: $size-up-btn;
@@ -74,9 +75,10 @@ $size-up-btn: 4rem;
     z-index: 500;
     border: 1px solid $theme-light-color;
 
-    /* Neumorphism Theme */
-    box-shadow:
-        0px 0px 20px -1px rgba(255, 255, 255, 0.2);
+    // TODO: delete
+    // /* Neumorphism Theme */
+    // // box-shadow:
+    // //     0px 0px 20px -1px rgba(255, 255, 255, 0.2);
 
     @media all and (max-width: $screen_sm) {
         height: 4rem;

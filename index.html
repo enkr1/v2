@@ -121,7 +121,89 @@
   <div class="cursor"></div>
 
   <div id="all-sections">
-    <about-section></about-section>
+    <!-- <about-section></about-section> -->
+    <section id="about" class="about about-section">
+      <div class="container">
+        <div class="window window-left terminal">
+          <div class="mac-bar">
+            <div class="mb r"></div>
+            <div class="mb y"></div>
+            <div class="mb g"></div>
+          </div>
+
+          <div class="terminal-body">
+            <div class="terminal-output">
+              <div class="command-line">
+                <span class="prompt">$</span>
+                <input type="text" name="terminal-input" class="terminal-input" placeholder="" autofocus>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <div class="window window-right">
+          <div class="mac-bar">
+            <div class="ryg-container">
+              <div class="mb r"></div>
+              <div class="mb y"></div>
+              <div class="mb g"></div>
+            </div>
+            <p class="window-title">README.md</p>
+          </div>
+          <div class="rm-body">
+
+
+            <h2>specification</h2>
+            <ul>
+              <li>First Name: Jing Hui</li>
+              <li>Last Name: PANG</li>
+              <li>Date of Birth: 6th December 1999</li>
+              <li>Hobbies: Coding, beatboxing, working out!</li>
+              <li></li>
+
+            </ul>
+
+            <h2>description</h2>
+            <p>
+              As a software engineer with a passion for solving challenging problems and producing high-quality code, I
+              am
+              eager to make a difference in the industry. With a diploma in Information Technology from <a
+                href=\"https://www.sp.edu.sg/\" target=\"_blank\">Singapore Polytechnic</a>, where I specialised in
+              Solution Development, Data Structure Algorithm, and User Interface Design (UI/UX), I have the necessary
+              skills and knowledge to contribute to the coding world. Currently, I am a lead software engineer at <a
+                href=\"https://pixiumdigital.com/\" target=\"_blank\">Pixium Digital</a>, Singapore, where I work with
+              the
+              <a href=\"https://elixir-lang.org\" target=\"_blank\">Elixir Phoenix</a> team and continuously strive to
+              improve my skills. I am dedicated to delivering innovative and sustainable solutions and look forward to
+              contributing to the growth and success of my future employer.
+            </p>
+
+            <h2>SKILL SETS</h2>
+            <ul>
+              <li>
+                Proficient in functional programming languages Elixir (Phoenix framework) and PHP (Yii2 framework).
+              </li>
+              <li>
+                Proficient in web development technologies such as HTML, SCSS, CSS, and JavaScript.
+              </li>
+              <li>
+                Strong background in data structures and algorithms
+              </li>
+              <li>
+                Proficient in writing SQL queries and experienced with PostgreSQL
+              </li>
+              <li>
+                Competent in the dockerised environment
+              </li>
+              <li>
+                Advanced beginner in DevOps and experienced in AWS services such as S3 bucket, Textract and EC2
+                instances.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
     <specialisation-section></specialisation-section>
     <experience-section></experience-section>
 
@@ -226,6 +308,74 @@
   <script type="text/javascript" defer src="js/main.js"></script>
 
   <script>
+    /*
+    // typing effects for about me
+    const landingtexts = [
+      "i design website and mobile applications.",
+      "feel free to contact me for collaboration or",
+      "any website services!",
+    ];
+    let count = 0;
+    let index = 0;
+    let currentText = "";
+    let letter = "";
+    let letterdone = false;
+
+    (function type() {
+      if (count === landingtexts.length) {
+        count = 0;
+      }
+
+      currentText = landingtexts[count];
+      letter = currentText.slice(0, ++index);
+      document.querySelector(".typing").textContent = letter;
+
+      if (letter.length === currentText.length) {
+        count++;
+        index = 0; // reset
+        letterdone = true;
+      }
+
+      // one line check
+      if (letterdone == false) {
+        setTimeout(type, 100);
+      } else {
+        setTimeout(type, 800);
+        letterdone = false;
+      }
+    })();
+
+    setTimeout(function () {
+      // https://www.youtube.com/watch?v=GUEB9FogoP8&t=173s vanilla
+      const text = document.querySelector(".rm-desc");
+      const strText = text.textContent;
+      const splitText = strText.split("");
+      text.textContent = "";
+      text.classList.add("show");
+
+      for (let i = 0; i < splitText.length; i++) {
+        text.innerHTML += "<span>" + splitText[i] + "</span>";
+      }
+
+      let char = 0;
+      let timer = setInterval(onTick, 80);
+
+      function onTick() {
+        const span = text.querySelectorAll("span")[char];
+        span.classList.add("main-h6-anim");
+        char++;
+        if (char === splitText.length) {
+          complete();
+          return;
+        }
+      }
+
+      function complete() {
+        clearInterval(timer);
+        timer = null;
+      }
+    }, 800);
+    */
     /*
     // typing effects
     const landingtexts = [
