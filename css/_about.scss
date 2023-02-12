@@ -195,105 +195,36 @@
 
                 .rm-body {
                     height: 94%;
+
+                    .about-social-media {
+                        ul {
+                            display: flex;
+                            gap: 2rem;
+                            margin: 0 0 0 1rem;
+
+                            li {
+                                list-style: none;
+
+                                i {
+                                    font-size: 3rem;
+                                    transition: color .2s;
+                                    opacity: .8;
+                                    color: $media-icon-color;
+
+                                    @media all and (max-width: $screen_sm) {
+                                        margin: 100% 0 0 0;
+                                    }
+                                }
+
+                                i:hover {
+                                    opacity: 1;
+                                    transition: all 0.3s ease-in-out;
+                                }
+                            }
+                        }
+                    }
                 }
             }
         }
     }
-}
-
-
-// TODO: Delete them
-.about-details {
-    // flex: 1;
-
-    .about-heading {
-        text-align: center;
-        text-transform: uppercase;
-        line-height: 0;
-        margin-bottom: 6rem;
-        color: $theme-color;
-
-        h1 {
-            z-index: -1;
-            font-size: 28rem;
-            /* Neumorphism Theme */
-            // TODO:  make the color like the curse
-            color: $theme-h1-color;
-
-            // https://stackoverflow.com/questions/58133329/how-to-use-css-backdrop-filter-on-text
-            // backdrop-filter: grayscale(1);
-
-            @media all and (max-width: $screen_md_1) {
-                font-size: 8rem;
-            }
-        }
-
-        h6 {
-            z-index: 1 !important;
-            font-family: monospace;
-            color: $theme-font-color;
-            font-size: 4rem;
-            font-weight: 300;
-            margin-top: .45rem;
-
-            @media all and (max-width: $screen_md_2) {
-                font-size: 3rem;
-                margin-top: .3rem;
-            }
-        }
-    }
-
-    // TODO: NEED TO DOUBLE CHECK
-    @media all and (max-width: $screen_md_2) {
-        .nav-list {
-            flex-direction: row;
-        }
-
-        li {
-            margin: 0 2rem;
-        }
-    }
-
-    p {
-        text-align: justify;
-        font-weight: 300;
-
-        @media all and (max-width: $screen_sm) {
-            padding: 0 2rem;
-            line-height: 1.6;
-            padding: 0 auto;
-        }
-    }
-
-    /* Green Theme */
-    /* .about-social-media img {
-    margin: 60% 1rem 0 1rem;
-    width: 5rem;
-    } */
-
-    .about-social-media {
-
-        i {
-            font-size: 3rem;
-            transition: color .2s;
-            margin: 60% 1rem 0 1rem;
-            opacity: .6;
-            color: $media-icon-color;
-
-            // /*  Neumorphism Theme */
-            // box-shadow: $neumorphism-box-shadow;
-
-            @media all and (max-width: $screen_sm) {
-                /* margin-top: 100%; */
-                margin: 100% 0 0 0;
-                /* width: 4rem; */
-            }
-        }
-
-        i:hover {
-            opacity: 1;
-            transition: all 0.7s ease-in-out;
-        }
-    }
-
 }
