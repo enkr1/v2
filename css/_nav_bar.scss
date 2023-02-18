@@ -130,7 +130,18 @@ header {
 
             // TODO: Add cool border animation like joining the string.
             &.active {
-                border: 1px solid $theme-light-color;
+                position: relative;
+                // border-top: 1px solid $theme-light-color;
+                // border-right: 1px solid $theme-light-color;
+                // border-bottom: 1px solid $theme-light-color;
+
+                &::before {
+                    content: "|> ";
+                    letter-spacing: -.2rem;
+                    position: absolute;
+                    top: 18.5%;
+                    left: 0;
+                }
             }
         }
 

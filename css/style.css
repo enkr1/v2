@@ -949,7 +949,14 @@ header {
   }
 }
 .nav-list .nav-link-container .nav-link.active {
-  border: 1px solid #b7b7b7;
+  position: relative;
+}
+.nav-list .nav-link-container .nav-link.active::before {
+  content: "|> ";
+  letter-spacing: -.2rem;
+  position: absolute;
+  top: 18.5%;
+  left: 0;
 }
 .nav-list .nav-link-container .nav-link:hover,
 .nav-list .nav-link-container .nav-link:focus {
@@ -1560,6 +1567,7 @@ li {
 }
 .about .container .window.window-right .rm-body .about-social-media ul li {
   list-style: none;
+  margin: 0;
 }
 .about .container .window.window-right .rm-body .about-social-media ul li i {
   font-size: 3rem;
@@ -1700,195 +1708,137 @@ li {
 }
 
 /*End Specialisation*/
-/*Start timeline*/
 .experience {
   height: 100vh;
 }
-@media only screen and (max-width: 1024px) {
-  .experience {
-    height: -webkit-fit-content;
-    height: -moz-fit-content;
-    height: fit-content;
-  }
+.experience .section-heading {
+  display: none;
 }
-@media only screen and (min-width: 992px) {
-  .experience {
-    overflow: hidden;
-  }
-  .experience .section-heading {
-    position: absolute;
-    -webkit-user-select: none;
-       -moz-user-select: none;
-        -ms-user-select: none;
-            user-select: none;
-    z-index: -1;
-    top: 0;
-    left: 0;
-    -webkit-transform-origin: bottom;
-            transform-origin: bottom;
-    -webkit-transform: translate(-30%, 80%) rotate(-90deg);
-            transform: translate(-30%, 80%) rotate(-90deg);
-  }
-  .experience .section-heading h1 {
-    font-size: 10rem;
-    color: rgba(255, 255, 255, 0.15);
-  }
-  .experience .section-heading h6 {
-    display: none;
-  }
-}
-@media only screen and (min-width: 992px) {
-  .experience .journey-container {
-    height: 100vh;
-    -webkit-transform: translate(0, 30%);
-            transform: translate(0, 30%);
-  }
-}
-.experience .timeline {
-  margin-left: 22rem;
-  margin-bottom: 8rem;
+.experience .container .timeline-container {
+  margin: 0 0 8rem 22rem;
+  height: 100vh;
+  border-left: 3px solid #b7b7b7;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
 }
 @media all and (max-width: 768px) {
-  .experience .timeline {
-    margin: 0;
+  .experience .container .timeline-container {
     padding: 0;
-    margin-left: 12rem;
+    margin: 0 0 0 12rem;
   }
 }
-.experience .timeline ul {
-  border-left: 4px solid #b7b7b7;
-  background-color: rgba(0, 0, 0, 0.1);
-  margin: 0 auto;
-  list-style: none;
+.experience .container .timeline-container .date {
+  position: relative;
   text-align: left;
   width: 100%;
-  padding: 2rem 0 2rem 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 }
-@media all and (max-width: 992px) {
-  .experience .timeline ul {
-    /* padding: 2rem 0 2rem 1rem; */
-    padding: 1rem 0 3rem 4.3rem;
-    margin: 0 0 0 auto;
-  }
-}
-@media all and (max-width: 768px) {
-  .experience .timeline ul {
-    padding: 0 auto;
-    margin: 0 auto;
-  }
-}
-.experience .timeline ul .date {
-  border-bottom: 2px solid rgba(0, 0, 0, 0.1);
-  margin-bottom: 1rem;
-  padding-bottom: 1rem;
-  position: relative;
-}
-.experience .timeline ul .date:last-of-type {
-  padding-bottom: 0;
-  margin-bottom: 0;
-  border: none;
-}
-.experience .timeline ul .date::before, .experience .timeline ul .date::after {
+.experience .container .timeline-container .date::before, .experience .container .timeline-container .date::after {
   position: absolute;
   display: block;
   top: 50%;
 }
-.experience .timeline ul .date::before {
+.experience .container .timeline-container .date::before {
   content: attr(data-date);
   text-align: right;
+  width: 20rem;
   min-width: 12rem;
   font-size: 2rem;
-  -webkit-transform: translate(-20rem, -70%);
-          transform: translate(-20rem, -70%);
+  -webkit-transform: translate(-25rem, -70%);
+          transform: translate(-25rem, -70%);
 }
 @media all and (max-width: 1024px) {
-  .experience .timeline ul .date::before {
+  .experience .container .timeline-container .date::before {
     -webkit-transform: translate(-140%, -70%);
             transform: translate(-140%, -70%);
   }
 }
 @media all and (max-width: 992px) {
-  .experience .timeline ul .date::before {
+  .experience .container .timeline-container .date::before {
     -webkit-transform: translate(-22rem, -100%);
             transform: translate(-22rem, -100%);
   }
 }
 @media all and (max-width: 768px) {
-  .experience .timeline ul .date::before {
+  .experience .container .timeline-container .date::before {
     font-size: 1.6rem;
     -webkit-transform: translate(-19rem, -110%);
             transform: translate(-19rem, -110%);
   }
 }
-.experience .timeline ul .date::after {
+.experience .container .timeline-container .date::after {
   content: '';
-  -webkit-box-shadow: 0 0 0 4px #b7b7b7;
-          box-shadow: 0 0 0 4px #b7b7b7;
-  border-radius: 100%;
   height: 1.5rem;
   width: 1.5rem;
-  -webkit-transform: translate(-166%, -80%);
-          transform: translate(-166%, -80%);
-  background-color: #000000;
+  -webkit-transform: translate(-65%, -80%);
+          transform: translate(-65%, -80%);
+  background-color: #b7b7b7;
 }
 @media all and (max-width: 1024px) {
-  .experience .timeline ul .date::after {
+  .experience .container .timeline-container .date::after {
     -webkit-transform: translate(-140%, -70%);
             transform: translate(-140%, -70%);
   }
 }
 @media all and (max-width: 992px) {
-  .experience .timeline ul .date::after {
+  .experience .container .timeline-container .date::after {
     -webkit-transform: translate(-355%, -110%);
             transform: translate(-355%, -110%);
   }
 }
 @media all and (max-width: 768px) {
-  .experience .timeline ul .date::after {
+  .experience .container .timeline-container .date::after {
     /* transform: translateX(-355%);  */
   }
 }
-.experience .timeline ul h1 {
+.experience .container .timeline-container .date h1 {
   font-size: 2rem;
   text-transform: uppercase;
   font-weight: 300;
   margin-bottom: 0.3rem;
   opacity: .3;
 }
-.experience .timeline ul p,
-.experience .timeline ul h1 {
+.experience .container .timeline-container .date p,
+.experience .container .timeline-container .date h1 {
   -webkit-transform: translateX(2.6rem);
           transform: translateX(2.6rem);
 }
 @media all and (max-width: 1024px) {
-  .experience .timeline ul p,
-  .experience .timeline ul h1 {
+  .experience .container .timeline-container .date p,
+  .experience .container .timeline-container .date h1 {
     -webkit-transform: translateX(1.2rem);
             transform: translateX(1.2rem);
   }
 }
 @media all and (max-width: 992px) {
-  .experience .timeline ul p,
-  .experience .timeline ul h1 {
+  .experience .container .timeline-container .date p,
+  .experience .container .timeline-container .date h1 {
     -webkit-transform: translateX(0);
             transform: translateX(0);
     width: 95%;
   }
 }
 @media all and (max-width: 768px) {
-  .experience .timeline ul p,
-  .experience .timeline ul h1 {
+  .experience .container .timeline-container .date p,
+  .experience .container .timeline-container .date h1 {
     -webkit-transform: translateX(-2.4rem);
             transform: translateX(-2.4rem);
   }
 }
 @media all and (max-width: 768px) {
-  .experience .timeline ul p {
+  .experience .container .timeline-container .date p {
     font-size: 1.4rem;
   }
 }
 
-/*End timeline*/
 /*Start portfolio*/
 .portfolio {
   height: -webkit-fit-content;
