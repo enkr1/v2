@@ -137,11 +137,7 @@ header {
                 // border-bottom: 1px solid $theme-light-color;
 
                 &::before {
-                    content: "|> ";
-                    letter-spacing: -.2rem;
                     position: absolute;
-                    top: 18.5%;
-                    left: 0;
                 }
             }
         }

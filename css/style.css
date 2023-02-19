@@ -663,6 +663,13 @@ span {
   overflow-y: visible;
 }
 
+.elixir-style::before {
+  content: "|> ";
+  letter-spacing: -.2rem;
+  top: 18.5%;
+  left: 0;
+}
+
 .eye-candy-animation .snow {
   position: fixed;
   display: block;
@@ -949,11 +956,7 @@ header {
   position: relative;
 }
 .nav-list .nav-link-container .nav-link.active::before {
-  content: "|> ";
-  letter-spacing: -.2rem;
   position: absolute;
-  top: 18.5%;
-  left: 0;
 }
 .nav-list .nav-link-container .nav-link:hover,
 .nav-list .nav-link-container .nav-link:focus {
@@ -1706,16 +1709,22 @@ li {
 
 /*End Specialisation*/
 .experience {
-  height: 100vh;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
   background-color: #000;
+  padding: 10vh 0;
 }
 .experience .section-heading {
   display: none;
 }
 .experience .container .timeline-container {
-  margin: 0 0 8rem 22rem;
+  margin: 0 0 0 12vw;
   height: 100vh;
-  border-left: 3px solid #60ff58;
+  min-height: 100vh;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1727,114 +1736,101 @@ li {
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
 }
-@media all and (max-width: 768px) {
+.experience .container .timeline-container::before, .experience .container .timeline-container::after {
+  content: "";
+}
+@media all and (max-width: 1281px) {
   .experience .container .timeline-container {
-    padding: 0;
-    margin: 0 0 0 12rem;
+    margin: 0 0 0 20vw;
   }
 }
-.experience .container .timeline-container .date {
+@media all and (max-width: 992px) {
+  .experience .container .timeline-container {
+    margin: 0 0 0 10vw;
+  }
+}
+@media all and (max-width: 480px) {
+  .experience .container .timeline-container {
+    margin: 0 0 0 8vw;
+  }
+}
+.experience .container .timeline-container .single-exp-container {
+  position: relative;
+  padding: 0 0 0 4rem;
+}
+.experience .container .timeline-container .single-exp-container::before {
+  position: absolute;
+  content: '';
+  height: 2rem;
+  width: 2rem;
+  top: 0;
+  left: -1.2rem;
+  background-color: #60ff58;
+  -webkit-transition: .8s all ease-in-out;
+  transition: .8s all ease-in-out;
+}
+.experience .container .timeline-container .single-exp-container:hover::before {
+  -webkit-transform: rotate(225deg);
+          transform: rotate(225deg);
+}
+.experience .container .timeline-container .single-exp-container .date-and-title-container {
   position: relative;
   text-align: left;
   width: 100%;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  margin: 0 0 .8rem;
 }
-.experience .container .timeline-container .date::before, .experience .container .timeline-container .date::after {
+.experience .container .timeline-container .single-exp-container .date-and-title-container::before, .experience .container .timeline-container .single-exp-container .date-and-title-container::after {
   position: absolute;
   display: block;
   top: 50%;
 }
-.experience .container .timeline-container .date::before {
+.experience .container .timeline-container .single-exp-container .date-and-title-container::before {
   content: attr(data-date);
   text-align: right;
   width: 20rem;
   min-width: 12rem;
   font-size: 2rem;
-  -webkit-transform: translate(-25rem, -70%);
-          transform: translate(-25rem, -70%);
-}
-@media all and (max-width: 1024px) {
-  .experience .container .timeline-container .date::before {
-    -webkit-transform: translate(-140%, -70%);
-            transform: translate(-140%, -70%);
-  }
+  -webkit-transform: translate(-30rem, -125%);
+          transform: translate(-30rem, -125%);
 }
 @media all and (max-width: 992px) {
-  .experience .container .timeline-container .date::before {
-    -webkit-transform: translate(-22rem, -100%);
-            transform: translate(-22rem, -100%);
-  }
-}
-@media all and (max-width: 768px) {
-  .experience .container .timeline-container .date::before {
+  .experience .container .timeline-container .single-exp-container .date-and-title-container::before {
     font-size: 1.6rem;
-    -webkit-transform: translate(-19rem, -110%);
-            transform: translate(-19rem, -110%);
+    text-align: left;
+    -webkit-transform: translate(-15rem, -20%) rotate(-90deg);
+            transform: translate(-15rem, -20%) rotate(-90deg);
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
   }
 }
-.experience .container .timeline-container .date::after {
-  content: '';
-  height: 1.5rem;
-  width: 1.5rem;
-  -webkit-transform: translate(-65%, -80%);
-          transform: translate(-65%, -80%);
-  background-color: #60ff58;
-}
-@media all and (max-width: 1024px) {
-  .experience .container .timeline-container .date::after {
-    -webkit-transform: translate(-140%, -70%);
-            transform: translate(-140%, -70%);
-  }
-}
-@media all and (max-width: 992px) {
-  .experience .container .timeline-container .date::after {
-    -webkit-transform: translate(-355%, -110%);
-            transform: translate(-355%, -110%);
-  }
-}
-@media all and (max-width: 768px) {
-  .experience .container .timeline-container .date::after {
-    /* transform: translateX(-355%);  */
-  }
-}
-.experience .container .timeline-container .date h1 {
+.experience .container .timeline-container .single-exp-container .date-and-title-container h1 {
   font-size: 2rem;
   text-transform: uppercase;
   font-weight: 300;
   margin-bottom: 0.3rem;
-  opacity: .3;
+  letter-spacing: .1rem;
 }
-.experience .container .timeline-container .date p,
-.experience .container .timeline-container .date h1 {
-  -webkit-transform: translateX(2.6rem);
-          transform: translateX(2.6rem);
-}
-@media all and (max-width: 1024px) {
-  .experience .container .timeline-container .date p,
-  .experience .container .timeline-container .date h1 {
-    -webkit-transform: translateX(1.2rem);
-            transform: translateX(1.2rem);
+@media all and (max-width: 992px) {
+  .experience .container .timeline-container .single-exp-container .date-and-title-container h1 {
+    font-size: 1.6rem;
   }
 }
 @media all and (max-width: 992px) {
-  .experience .container .timeline-container .date p,
-  .experience .container .timeline-container .date h1 {
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
-    width: 95%;
-  }
-}
-@media all and (max-width: 768px) {
-  .experience .container .timeline-container .date p,
-  .experience .container .timeline-container .date h1 {
-    -webkit-transform: translateX(-2.4rem);
-            transform: translateX(-2.4rem);
-  }
-}
-@media all and (max-width: 768px) {
-  .experience .container .timeline-container .date p {
+  .experience .container .timeline-container .single-exp-container .date-and-title-container p {
     font-size: 1.4rem;
   }
+}
+.experience .container .timeline-container .single-exp-container .date-and-title-container .exp-desc {
+  font-weight: 400;
+}
+.experience .container .timeline-container .single-exp-container .points-container {
+  position: relative;
+}
+.experience .container .timeline-container .single-exp-container .points-container p {
+  font-size: 1.4rem;
+  margin: 0 0 1rem 1rem;
+  font-weight: 200;
 }
 
 /*Start portfolio*/

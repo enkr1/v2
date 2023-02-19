@@ -393,3 +393,12 @@ $nav-logo-left-y: .3em;
 .enablescroll {
     overflow-y: visible;
 }
+
+.elixir-style {
+    &::before {
+        content: "|> ";
+        letter-spacing: -.2rem;
+        top: 18.5%;
+        left: 0;
+    }
+}
