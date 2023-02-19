@@ -122,6 +122,12 @@
                     }
                 }
 
+                @media all and (max-width: $screen_md_2) {
+                    display: none;
+                }
+
+                // @media all and (max-width: $screen_xs) {}
+
                 &.anim-from-left {
                     left: $padding-side-window;
                 }
@@ -174,12 +180,23 @@
                 background-color: rgb(199, 199, 199);
                 opacity: .8;
 
-                &:hover {
-                    top: $hovered-top;
-                    height: $hovered-height;
-                    width: $hovered-width;
-                    opacity: $hovered-opacity-window;
+                @media all and (min-width: $screen_md_2) {
+                    &:hover {
+                        top: $hovered-top;
+                        height: $hovered-height;
+                        width: $hovered-width;
+                        opacity: $hovered-opacity-window;
+                    }
                 }
+
+                @media all and (max-width: $screen_md_2) {
+                    top: 8vh;
+                    left: 2%;
+                    margin: auto;
+                    width: 90%;
+                }
+
+                @media all and (max-width: $screen_xs) {}
 
                 h1,
                 h2 {
@@ -187,14 +204,34 @@
                     margin: 1rem 0 .8rem;
                     font-size: 2rem;
                     text-transform: uppercase;
+
+                    @media all and (max-width: $screen_md_2) {
+                        font-size: 1.6rem;
+                    }
                 }
 
                 ul {
                     margin: 0 0 0 2rem;
+
+                }
+
+                li,
+                p {
+                    @media all and (max-width: $screen_md_2) {
+                        font-size: 1.4rem;
+                    }
+
+                    // @media all and (max-width: $screen_sm) {
+                    //     font-size: 1.8rem;
+                    // }
                 }
 
                 .rm-body {
                     height: 94%;
+
+                    @media all and (max-width: $screen_md_2) {
+                        padding: 0 1rem 1rem;
+                    }
 
                     .about-social-media {
                         ul {
@@ -212,9 +249,10 @@
                                     opacity: .8;
                                     color: $media-icon-color;
 
-                                    @media all and (max-width: $screen_sm) {
-                                        margin: 100% 0 0 0;
+                                    @media all and (max-width: $screen_md_2) {
+                                        font-size: 2.4rem;
                                     }
+
                                 }
 
                                 i:hover {
