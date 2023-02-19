@@ -13,7 +13,7 @@
 
 *::selection {
     color: $theme-dark-color;
-    background-color: $theme-light-color;
+    background-color: $theme-color;
 }
 
 $size-cursor: 2rem;
@@ -140,7 +140,7 @@ h1 {
 // Common
 h1,
 h6 {
-    user-select: none;
+    // user-select: none;
 }
 
 /* all links */

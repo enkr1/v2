@@ -1,10 +1,10 @@
 .eye-candy-animation {
+  // ...
 
   .snow {
-    position: absolute;
+    position: fixed;
     display: block;
-    background: #fff;
-    // border-radius: 100%;
+    background: $theme-color;
     top: -20%;
     margin: 2%;
   }

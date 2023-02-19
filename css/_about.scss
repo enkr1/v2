@@ -16,7 +16,7 @@
         width: 100vw;
         margin: 0;
         padding: 0;
-        background: rgb(225, 225, 225);
+        background: rgba(225, 225, 225, .3);
 
         // // background: url("../images/4.jpg") no-repeat center fixed;
         // // background: url("https://cdn.discordapp.com/attachments/759968307738181653/822710501795954738/mmexport1579951996076.jpg") no-repeat center fixed;
@@ -45,7 +45,7 @@
             // transition: left 3s ease-in-out,
             //     top 1s ease-in-out;
             border-radius: 1rem;
-            border: 1px solid rgb(206, 206, 206);
+            border: .8px solid rgb(206, 206, 206);
             box-shadow: 2px 2px 10px rgba(34, 34, 34, 0.3);
 
             p,
