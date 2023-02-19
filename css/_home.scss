@@ -83,12 +83,10 @@
 
             @media all and (max-width: $screen_md_1) {
                 width: 14%;
-                border-radius: 3rem; // SAME THO?
             }
 
             @media all and (max-width: $screen_sm) {
                 width: 26%;
-                border-radius: 2rem;
                 margin: 1%;
             }
 
@@ -123,7 +121,7 @@
                 /* explore button */
                 &.explore-btn {
                     transition: all .8s;
-                    box-shadow: unset !important;
+                    // box-shadow: unset !important;
 
                     .scroll-down-anim {
                         // box-shadow: $neumorphism-box-shadow;
@@ -145,6 +143,12 @@
 
                     &:hover {
                         border: unset;
+                        box-shadow: unset;
+
+                        // NOTE: Possible to do with resizing with box shadow but meaning the padding issue on hovering will be obvious.
+                        // width: 3rem;
+                        // height: 5rem;
+                        // border-radius: 2rem;
 
                         .action-text-2 {
                             opacity: 0;
@@ -156,9 +160,10 @@
                             box-shadow: unset;
                             width: 3rem;
                             height: 5rem;
-                            border: 1px solid $media-icon-color;
                             border-radius: 2rem;
+                            border: 1px solid $theme-color;
                             box-sizing: border-box;
+                            box-shadow: $neumorphism-box-shadow;
 
                             &::before {
                                 content: '';

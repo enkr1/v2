@@ -24,7 +24,7 @@
         .timeline-container {
             margin: 0 0 8rem 22rem;
             height: 100vh;
-            border-left: 3px solid $theme-light-color;
+            border-left: 3px solid $theme-color;
             display: flex;
             flex-direction: column;
             justify-content: space-evenly;
@@ -83,7 +83,7 @@
                     height: 1.5rem;
                     width: 1.5rem;
                     transform: translate(-65%, -80%);
-                    background-color: $theme-light-color;
+                    background-color: $theme-color;
 
                     @media all and (max-width: $screen_md_1) {
                         transform: translate(-140%, -70%);

@@ -16,7 +16,7 @@
         display: block;
         padding-top: 4rem;
         box-shadow: $neumorphism-box-shadow;
-        border: 1px solid #999;
+        // border: 1px solid $theme-color;
         height: 80%;
         margin: auto;
 
@@ -204,7 +204,8 @@ input.contact-submit-btn {
     padding: 0.8rem 3rem;
     border: none;
     border-radius: .9rem;
-    cursor: pointer;
+    // NOTE: Hide for the cursor eye candy
+    // cursor: pointer;
 
     /* Neumorphism pulse */
     // box-shadow:

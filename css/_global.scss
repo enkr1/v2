@@ -16,6 +16,37 @@
     background-color: $theme-light-color;
 }
 
+$size-cursor: 2rem;
+
+.cursor {
+    width: $size-cursor;
+    height: $size-cursor;
+    // border-radius: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    transform-origin: 66% 60%;
+    pointer-events: none;
+    z-index: 999;
+    transition: all 0.6s ease-in-out;
+    transition-property: background, transform, box-shadow, border-radius;
+    /* transition: all 0.1s ease; */
+    // box-shadow: 0 0 1rem 0 $theme-color;
+    box-shadow: $neumorphism-box-shadow;
+    backdrop-filter: sepia(38%);
+    /* backdrop-filter: invert(30%); */
+
+    @media all and (max-width: $screen_md_2) {
+        display: none;
+    }
+}
+
+/* apply to js */
+.img-grow {
+    border-radius: 50%;
+    box-shadow: 0 0 .3rem 0 $theme-color;
+    transform: scale(8);
+}
+
 // REF: https://fonts.google.com/specimen/Roboto+Mono
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
 
@@ -74,7 +105,7 @@ body.portfolio-body {
 
     box-shadow: inset 0 0 100vw 100vh #9796f010;
     /* This will be displayed if it is loading for too long */
-    background-color: #131218;
+    background-color: $theme-dark-color;
 
     /*  Neumorphism Theme */
     // background: $theme-background;
@@ -113,15 +144,14 @@ h6 {
 }
 
 /* all links */
-// TODO: Better colour
 a {
     text-decoration: none;
-    color: $theme-color;
+    color: $theme-anchor-tag-color;
     transition: all .2s ease-in-out;
     font-weight: 500;
 
     &:hover {
-        // color: $theme-light-color;
+        color: $theme-color;
     }
 }
 
@@ -339,34 +369,6 @@ span {
         margin-right: 0;
         text-align: left;
     }
-}
-
-.cursor {
-    width: 3rem;
-    height: 3rem;
-    border: 0 solid $theme-light-color;
-    border-radius: 50%;
-    position: absolute;
-    transform: translate(-50%, -50%);
-    transform-origin: 66% 60%;
-    pointer-events: none;
-    z-index: 999;
-    transition: all 0.6s ease-in-out;
-    transition-property: background, transform;
-    /* transition: all 0.1s ease; */
-    box-shadow:
-        0px 0px 22px 0px $theme-light-color;
-    backdrop-filter: sepia(100%);
-
-    /* backdrop-filter: invert(30%); */
-    @media all and (max-width: $screen_md_2) {
-        display: none;
-    }
-}
-
-/* apply to js */
-.img-grow {
-    transform: scale(3);
 }
 
 // For js body

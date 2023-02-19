@@ -73,7 +73,7 @@ $size-up-btn: 4rem;
     cursor: pointer;
     /* animation: pulse 2s infinite; */
     z-index: 500;
-    border: 1px solid $theme-light-color;
+    border: 1px solid $theme-color;
 
     // TODO: delete
     // /* Neumorphism Theme */
@@ -96,7 +96,7 @@ $size-up-btn: 4rem;
     }
 
     i {
-        color: $theme-light-color;
+        color: $theme-color;
         font-size: 1.8rem;
         transform: translateY(50%);
 
