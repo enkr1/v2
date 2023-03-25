@@ -72,7 +72,6 @@
                         border-radius: 100%;
                     }
 
-
                     .r {
                         background-color: #FF605C;
                     }
@@ -219,6 +218,7 @@
                 p {
                     @media all and (max-width: $screen_md_2) {
                         font-size: 1.4rem;
+                        margin: 0 0 .3rem;
                     }
 
                     // @media all and (max-width: $screen_sm) {

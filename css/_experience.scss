@@ -3,20 +3,12 @@
     // min-height: 100vh;
     // height: 100vh;
     background-color: #000;
-    padding: 10vh 0;
+    padding: 3rem 0;
+    overflow: hidden;
 
-    //     @media only screen and (min-width: $screen_md_2) {
-    //         .section-heading {
-    //             h1 {
-    //                 font-size: 10rem;
-    //                 color: $theme-h1-color;
-    //             }
-    //
-    //             h6 {
-    //                 display: none;
-    //             }
-    //         }
-    //     }
+    @media only screen and (max-width: $screen_md_2) {
+        padding: 8rem 0;
+    }
 
     .section-heading {
         display: none;
@@ -39,6 +31,44 @@
             &::before,
             &::after {
                 content: "";
+            }
+
+            #svg-journey-route {
+                position: absolute;
+                // width: 100vw;
+                width: 170rem;
+                top: -18rem;
+                left: -10rem;
+                height: fit-content;
+                opacity: .1;
+
+                // 1281
+                @media all and (max-width: $screen_lg) {
+                    width: 150rem;
+                    left: -5rem;
+                    top: -4rem;
+                }
+
+                // 992
+                @media all and (max-width: $screen_md_2) {
+                    width: 8rem;
+                    left: 3rem;
+                    top: -8rem;
+                    mix-blend-mode: difference;
+                }
+
+                // 480
+                @media all and (max-width: $screen_xs) {
+                    // ...
+                }
+
+                path {
+                    animation: line-anime 8s ease-in-out forwards .3s;
+
+                    @media all and (max-width: $screen_xs) {
+                        animation: line-anime 3s ease-in-out forwards .3s;
+                    }
+                }
             }
 
             @media all and (max-width: $screen_lg) {

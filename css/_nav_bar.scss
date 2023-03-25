@@ -201,6 +201,10 @@ li {
 .top-nav {
     mix-blend-mode: difference;
 
+    @media all and (max-width: $screen_md_2) {
+        mix-blend-mode: unset;
+    }
+
     &.open {
         right: 0;
         opacity: 1;
