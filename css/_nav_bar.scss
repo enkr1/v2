@@ -106,6 +106,14 @@ header {
             flex-direction: column;
         }
 
+        li {
+            margin: 0 .5%;
+
+            @media all and (max-width: $screen_md_2) {
+                margin: 2rem 0;
+            }
+        }
+
         .nav-link {
             text-transform: uppercase;
             letter-spacing: .2rem;
@@ -181,16 +189,6 @@ header {
                 display: block;
             }
         }
-    }
-}
-
-// TODO: Simplify
-/* also for contact icon */
-li {
-    margin: 0 .5%;
-
-    @media all and (max-width: $screen_md_2) {
-        margin: 2rem 0;
     }
 }
 

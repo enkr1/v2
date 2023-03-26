@@ -14,16 +14,25 @@
         padding-bottom: 6.6rem;
     }
 
+    p {
+        letter-spacing: 0.6px;
+        font-size: 1.2rem;
+
+        @media all and (max-width: $screen_md_2) {
+            font-size: 1rem;
+        }
+    }
 
     .contact-social-media {
-        margin: 5rem 0;
+        margin: 5rem 1rem 3rem;
 
         ul.contact-social-media-ul {
             margin: 0 auto 2% auto;
 
             @media all and (max-width: $screen_md_2) {
-                text-align: center;
-                display: table;
+                display: flex;
+                flex-wrap: wrap;
+                gap: 1.8rem 1rem;
             }
 
             li {
@@ -33,9 +42,10 @@
 
                 a {
                     color: $theme-color;
+                    padding: 1rem;
 
                     @media all and (max-width: $screen_md_2) {
-                        margin: 0 2rem;
+                        // margin: 0 2rem;
                     }
 
                     i {
@@ -107,11 +117,6 @@ $size-up-btn: 4rem;
 }
 
 
-
-.main-footer p {
-    letter-spacing: 0.6px;
-    font-size: 1.2rem;
-}
 
 .visitcount {
     top: 0;
