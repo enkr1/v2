@@ -1,5 +1,5 @@
 RewriteEngine On
-RewriteRule ^(.+)\.html$ /$1 [R=301,L]
+# RewriteRule ^(.+)\.html$ /$1 [R=301,L]
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteRule ^([^\.]+)$ $1.html [NC,L]
 RewriteRule ^testt$ testt.html
