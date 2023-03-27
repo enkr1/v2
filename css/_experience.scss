@@ -49,18 +49,19 @@
                     top: -4rem;
                 }
 
-                // 992
-                @media all and (max-width: $screen_md_2) {
-                    width: 8rem;
-                    left: 3rem;
-                    top: -8rem;
-                    mix-blend-mode: difference;
-                }
-
-                // 480
-                @media all and (max-width: $screen_xs) {
-                    // ...
-                }
+                // NOTE: Decided to not show the svg on mobile
+                //                 // 992
+                //                 @media all and (max-width: $screen_md_2) {
+                //                     width: 8rem;
+                //                     left: 3rem;
+                //                     top: -8rem;
+                //                     mix-blend-mode: difference;
+                //                 }
+                //
+                //                 // 480
+                //                 @media all and (max-width: $screen_xs) {
+                //                     // ...
+                //                 }
 
                 path {
                     animation: line-anime 8s ease-in-out forwards .3s;

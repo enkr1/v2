@@ -1803,14 +1803,6 @@ header {
     top: -4rem;
   }
 }
-@media all and (max-width: 992px) {
-  .experience .container .timeline-container #svg-journey-route {
-    width: 8rem;
-    left: 3rem;
-    top: -8rem;
-    mix-blend-mode: difference;
-  }
-}
 .experience .container .timeline-container #svg-journey-route path {
   -webkit-animation: line-anime 8s ease-in-out forwards .3s;
           animation: line-anime 8s ease-in-out forwards .3s;
