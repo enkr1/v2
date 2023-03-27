@@ -1,4 +1,4 @@
 RewriteEngine On
 RewriteCond %{REQUEST_FILENAME} !-f
-RewriteRule ^(.+)\.html$ /$1 [R=301,L]
 Redirect 404 /404
+RewriteRule ^(.+)\.html$ /$1 [R=301,L]
