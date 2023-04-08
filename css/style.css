@@ -2784,6 +2784,9 @@ iframe {
   gap: 2rem;
   z-index: 2;
 }
+#platform-page #platform-section span {
+  font-weight: 400;
+}
 #platform-page #platform-section .single-button {
   background-color: rgba(0, 0, 0, 0.2);
   text-align: center;

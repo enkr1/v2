@@ -203,6 +203,10 @@
     gap: 2rem;
     z-index: 2;
 
+    span {
+      font-weight: 400;
+    }
+
     // Button
     .single-button {
       background-color: rgba(0, 0, 0, 0.2);
