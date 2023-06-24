@@ -181,6 +181,10 @@
                 letter-spacing: .1rem;
               }
 
+              span {
+                opacity: .8;
+              }
+
               @media screen and (max-width: $screen_sm) {
                 font-size: $font-size-al-p-sm;
               }
@@ -250,8 +254,14 @@
         height: 3.4rem;
         // text-transform: uppercase;
 
+        @media screen and (max-width: $screen_sm) {
+          height: 3rem;
+          // width: 80vw;
+        }
+
         span {
           font-size: $font-size-platforms-p-xl;
+          opacity: 1 !important;
 
           @media screen and (max-width: $screen_sm) {
             font-size: $font-size-platforms-p-sm;
@@ -260,11 +270,6 @@
           @media screen and (max-width: $screen_xs) {
             font-size: $font-size-platforms-p-xs;
           }
-        }
-
-        @media screen and (max-width: $screen_sm) {
-          height: 3rem;
-          // width: 80vw;
         }
 
         &:active {

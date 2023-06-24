@@ -2757,6 +2757,9 @@ iframe {
 #platform-page #profile-section .al-container .list-container .category-container .title-list-container p.al-title span:nth-child(2) {
   letter-spacing: .1rem;
 }
+#platform-page #profile-section .al-container .list-container .category-container .title-list-container p.al-title span {
+  opacity: .8;
+}
 @media screen and (max-width: 768px) {
   #platform-page #profile-section .al-container .list-container .category-container .title-list-container p.al-title {
     font-size: 1.3rem;
@@ -2826,8 +2829,14 @@ iframe {
           justify-content: start;
   height: 3.4rem;
 }
+@media screen and (max-width: 768px) {
+  #platform-page #platform-section .single-button a {
+    height: 3rem;
+  }
+}
 #platform-page #platform-section .single-button a span {
   font-size: 1.4rem;
+  opacity: 1 !important;
 }
 @media screen and (max-width: 768px) {
   #platform-page #platform-section .single-button a span {
@@ -2837,11 +2846,6 @@ iframe {
 @media screen and (max-width: 480px) {
   #platform-page #platform-section .single-button a span {
     font-size: 1.3rem;
-  }
-}
-@media screen and (max-width: 768px) {
-  #platform-page #platform-section .single-button a {
-    height: 3rem;
   }
 }
 #platform-page #platform-section .single-button a:active {
