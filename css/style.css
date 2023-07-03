@@ -670,6 +670,10 @@ span {
   left: 0;
 }
 
+#audio-melancholy {
+  display: none;
+}
+
 .eye-candy-animation .snow {
   position: fixed;
   display: block;
