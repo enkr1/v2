@@ -1,0 +1,103 @@
+@media all and (max-width: $screen_md_2) {
+
+    /* need to move to the correct css */
+    .back a img {
+        top: 2.5rem;
+    }
+
+    .rotating-box {
+        margin: auto;
+        margin-top: -6rem;
+    }
+
+    .more-button {
+        stroke-dasharray: 8;
+        stroke-dashoffset: 555;
+        animation: line-anime 8s ease forwards;
+        transform: translate(-50%, 500%);
+    }
+
+    .more-button a p {
+        font-size: 1.5rem;
+        bottom: 0;
+        padding: 2rem;
+        left: 2rem;
+        z-index: 2;
+    }
+
+    .more-button #arrow-svg {
+        transform: scale(1.2);
+    }
+}
+
+/* mobile */
+@media all and (max-width: $screen_sm) {
+
+    /* need to move to the correct css */
+    .back a img {
+        height: 2.3rem;
+        width: 2.5rem;
+        top: 2rem;
+        left: 0.6rem;
+    }
+
+    .rotating-box {
+        width: 20rem;
+        height: 20rem;
+        margin: auto;
+        margin-top: -7rem;
+    }
+
+    .single-rb img {
+        width: 20rem;
+        height: 20rem;
+    }
+
+    .font-side {
+        transform: translateZ(10rem);
+    }
+
+    .back-side {
+        transform: rotateY(180deg) translateZ(10rem);
+    }
+
+    .left-side {
+        transform: rotateY(-90deg) translateX(-10rem);
+        transform-origin: left;
+    }
+
+    .right-side {
+        transform: rotateY(90deg) translateX(10rem);
+        transform-origin: right;
+    }
+
+    .top-side {
+        transform: rotateX(-90deg) translateY(-10rem);
+        transform-origin: top;
+    }
+
+    .bottom-side {
+        transform: rotateX(90deg) translateY(10rem);
+        transform-origin: bottom;
+    }
+
+    .more-button {
+        stroke-dasharray: 8;
+        stroke-dashoffset: 700;
+        animation: line-anime 8s ease forwards;
+        transform: translate(-50%, 350%);
+    }
+
+    .more-button a p {
+        font-size: 1.2rem;
+        bottom: 0.3rem;
+        padding: 2rem;
+        left: 3.5rem;
+    }
+
+    .more-button #arrow-svg {
+        transform: scale(0.9);
+    }
+}
+
+/*End media queries*/

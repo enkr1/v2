@@ -10,7 +10,7 @@
                     @enkr1 | ENKR | Pang Jing Hui | 彭競辉
 
                       Developed & designed all by myself.
- -->
+-->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -34,20 +34,15 @@
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
     integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous" />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lora&display=swap" />
-  <!-- <link href="https://fonts.googleapis.com/css2?family=Heebo&family=Philosopher&family=Roboto+Mono&family=Source+Serif+Pro&display=swap" rel="stylesheet"> -->
-  <link
-    href="https://fonts.googleapis.com/css2?family=Alegreya+Sans&family=Anonymous+Pro&family=K2D&family=Overpass+Mono&family=Radley&display=swap"
-    rel="stylesheet" />
   <!-- End of External -->
 
   <link rel="stylesheet" href="css/style.css?v=3.0.0" />
 
 </head>
 
-<preloader-component></preloader-component>
 
 <body id="index-body" class="hide-all-in-body">
+  <preloader-component></preloader-component>
 
   <header id="home">
 
@@ -59,24 +54,27 @@
       </div>
     </div>
 
-    <div class="nav-logo-left">
+    <div class="nav-logo-left fade-left">
       <a href="/">ENKR</a>
     </div>
 
-    <nav class="top-nav nav-up">
+    <!-- <nav class="top-nav nav-up"> -->
+    <nav class="top-nav ">
 
       <ul class="nav-list top-nav-list">
         <div class="nav-logo">
           <a href="/">ENKR</a>
         </div>
         <div class="nav-link-container">
-          <li><a href="#home" class="nav-link">Home</a></li>
+          <li><a href="#home" class="nav-link home-nav-link">Home</a></li>
           <!-- <li><a href="#about" class="nav-link">About</a></li> -->
-          <li><a href="#about" class="nav-link">About</a></li>
-          <li><a href="#specialisation" class="nav-link">Specialisation</a></li>
-          <li><a href="#experience" class="nav-link">Experience</a></li>
-          <li><a href="#portfolio" class="nav-link">Portfolio</a></li>
-          <li><a href="#contact" class="nav-link">Contact</a></li>
+          <li><a href="#about" class="nav-link about-nav-link">About</a></li>
+          <!-- <li><a href="#specialisation" class="nav-link specialisation-nav-link">Specialisation</a></li> -->
+          <li><a href="#experience" class="nav-link experience-nav-link">Experience</a></li>
+          <!-- <li><a href="#portfolio" class="nav-link portfolio-nav-link">Portfolio</a></li> -->
+          <li><a href="#contact" class="nav-link contact-nav-link">Contact</a></li>
+          <li><a href="/platforms.html" target="_blank" id="linktree-nav-link"
+              class="nav-link linktree-nav-link">Platforms</a></li>
           <!-- <li><a href="interest" class="nav-link">Interest</a></li> -->
           <!-- <li><a href="#" class="nav-link" id="interest-nav-item">Interest</a></li> -->
           <!-- <li><a href="pdf/PangJingHui_Resume.pdf" class="nav-link" target="_blank">My Resume</a></li> -->
@@ -110,8 +108,11 @@
         <!-- <a class="action-btn bg-slide-to-left" href="portfolio">
           <p class="action-text-3">my work</p>
         </a> -->
-        <a class="action-btn bg-slide-to-left" href="resume.html" target="_blank">
-          <p class="action-text-3">resume</p>
+        <!-- <a class="action-btn bg-slide-to-left" href="resume.html" target="_blank">
+          <p class="action-text-3">resume (wip)</p>
+        </a> -->
+        <a class="action-btn bg-slide-to-left" href="#">
+          <p class="action-text-3">coming soon</p>
         </a>
 
       </nav>
@@ -121,53 +122,27 @@
 
   </header>
 
-  <!-- <div class="cursor"></div> -->
+  <div class="cursor"></div>
 
   <div id="all-sections">
     <about-section></about-section>
-    <specialisation-section></specialisation-section>
+    <!-- <specialisation-section></specialisation-section> -->
     <experience-section></experience-section>
 
-    <section class="portfolio" id="portfolio">
+    <!-- <section class="portfolio" id="portfolio">
       <div class="container">
         <div class="section-heading">
           <h1>Portfolio</h1>
           <h6>My finished works and recent projects</h6>
           <portfolio-items-component></portfolio-items-component>
         </div>
-
-
-        <!-- <div class="portfolio-item" data-aos="fade-right" data-aos-delay="300">
-          <div class="portfolio-img-div has-margin-right">
-            <img src="images/portitem2.jpg" alt="" />
-          </div>
-
-          <div class="portfolio-description">
-            <h6>Web Development</h6>
-            <h1>Jekyll Blog Website</h1>
-            <p>
-              My first Jekyll blog website. Jekyll is a simple, blog-aware,
-              static site generator for personal, project, or organization
-              sites. Written in Ruby by Tom Preston-Werner.
-              <br />
-              It's still a work-in-progress.
-            </p>
-            <a target="_blank" href="https://enkr1.github.io/portfolio/" class="cta">View website</a>
-          </div>
-
-        </div>
-
-        <a href="portfolio" class="cta view-more-btn" data-aos="fade-up" data-aos-delay="400">
-          View more projects
-        </a> -->
-
-
       </div>
+    </section> -->
 
-    </section>
-
-    <section class="contact contact-section" data-aos="fade-up" data-aos-delay="300">
-      <div class="container" id="contact">
+    <!-- <section class="contact contact-section" data-aos="fade-up" data-aos-delay="300"> -->
+    <section id="contact" class="contact contact-section" data-aos="fade-up" data-aos-delay="300">
+      <div class="container">
+        <!-- <div class="container" id="contact"> -->
         <div class="section-heading">
           <h1>Contact</h1>
           <h6>Let's be friends</h6>
@@ -216,6 +191,7 @@
       </div>
     </section>
   </div>
+
   <footer-component></footer-component>
 
   <!-- Start of External -->
@@ -227,6 +203,74 @@
   <script type="text/javascript" defer src="js/main.js"></script>
 
   <script>
+    /*
+    // typing effects for about me
+    const landingtexts = [
+      "i design website and mobile applications.",
+      "feel free to contact me for collaboration or",
+      "any website services!",
+    ];
+    let count = 0;
+    let index = 0;
+    let currentText = "";
+    let letter = "";
+    let letterdone = false;
+
+    (function type() {
+      if (count === landingtexts.length) {
+        count = 0;
+      }
+
+      currentText = landingtexts[count];
+      letter = currentText.slice(0, ++index);
+      document.querySelector(".typing").textContent = letter;
+
+      if (letter.length === currentText.length) {
+        count++;
+        index = 0; // reset
+        letterdone = true;
+      }
+
+      // one line check
+      if (letterdone == false) {
+        setTimeout(type, 100);
+      } else {
+        setTimeout(type, 800);
+        letterdone = false;
+      }
+    })();
+
+    setTimeout(function () {
+      // https://www.youtube.com/watch?v=GUEB9FogoP8&t=173s vanilla
+      const text = document.querySelector(".rm-desc");
+      const strText = text.textContent;
+      const splitText = strText.split("");
+      text.textContent = "";
+      text.classList.add("show");
+
+      for (let i = 0; i < splitText.length; i++) {
+        text.innerHTML += "<span>" + splitText[i] + "</span>";
+      }
+
+      let char = 0;
+      let timer = setInterval(onTick, 80);
+
+      function onTick() {
+        const span = text.querySelectorAll("span")[char];
+        span.classList.add("main-h6-anim");
+        char++;
+        if (char === splitText.length) {
+          complete();
+          return;
+        }
+      }
+
+      function complete() {
+        clearInterval(timer);
+        timer = null;
+      }
+    }, 800);
+    */
     /*
     // typing effects
     const landingtexts = [

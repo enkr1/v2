@@ -1,0 +1,129 @@
+/*Start footer*/
+.main-footer {
+    width: 100%;
+    text-align: center;
+    background-color: $theme-dark-color;
+    padding: .5% 0 4rem 0;
+    position: relative;
+
+    @media all and (max-width: $screen_md_1) {
+        padding-bottom: 5rem;
+    }
+
+    @media all and (max-width: $screen_md_2) {
+        padding-bottom: 6.6rem;
+    }
+
+    p {
+        letter-spacing: 0.6px;
+        font-size: 1.2rem;
+
+        @media all and (max-width: $screen_md_2) {
+            font-size: 1rem;
+        }
+    }
+
+    .contact-social-media {
+        margin: 5rem 1rem 3rem;
+
+        ul.contact-social-media-ul {
+            margin: 0 auto 2% auto;
+
+            @media all and (max-width: $screen_md_2) {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 1.8rem 1rem;
+            }
+
+            li {
+                @media all and (max-width: $screen_md_2) {
+                    display: inline-block;
+                }
+
+                a {
+                    color: $theme-color;
+                    padding: 1rem;
+
+                    @media all and (max-width: $screen_md_2) {
+                        // margin: 0 2rem;
+                    }
+
+                    i {
+                        font-size: 3rem;
+                        transition: color 650ms;
+                        margin: 0 1rem;
+
+                        // /*  Neumorphism Theme */
+                        // box-shadow:
+                        //     0px 0px 32px 10px rgba(0, 0, 0, 0.2);
+
+                        @media all and (max-width: $screen_sm) {
+                            font-size: 3rem;
+                            margin: 0 -0.6rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+$size-up-btn: 4rem;
+
+.up {
+    mix-blend-mode: difference;
+    position: fixed;
+    height: $size-up-btn;
+    width: $size-up-btn;
+    top: 89vh;
+    right: 3%;
+    // border-radius: 1rem;
+    display: none;
+    cursor: pointer;
+    /* animation: pulse 2s infinite; */
+    z-index: 500;
+    border: 1px solid $theme-color;
+
+    // TODO: delete
+    // /* Neumorphism Theme */
+    // // box-shadow:
+    // //     0px 0px 20px -1px rgba(255, 255, 255, 0.2);
+
+    @media all and (max-width: $screen_sm) {
+        height: 4rem;
+        width: 4rem;
+        top: 91vh;
+        right: 5vw;
+    }
+
+    &:hover {
+        transform: scale(.95);
+        /* Neumorphism */
+        box-shadow:
+            0px 0px 20px 0px rgba(255, 255, 255, 0.3);
+        transition: all .6s ease-in-out;
+    }
+
+    i {
+        color: $theme-color;
+        font-size: 1.8rem;
+        transform: translateY(50%);
+
+        @media all and (max-width: $screen_sm) {
+            font-size: 1.8rem;
+        }
+    }
+}
+
+
+
+.visitcount {
+    top: 0;
+    margin-top: 1rem;
+    transform: translate(0, 1%);
+    pointer-events: none;
+    display: none;
+}
+
+/*End footer*/

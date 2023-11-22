@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="icon" href="images/logo.gif" type="image/gif" sizes="16x16" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="referrer" content="origin" />
+
+  <meta name="author" content="ENKR | Pang Jing Hui | 彭競辉" />
+  <meta name="description"
+    content="Pang Jing Hui, also known as EnKr, is a software developer and beatboxer. This is a pure HTML, CSS, and JS website developed and designed all by himself." />
+  <meta name="keywords"
+    content="enkr1, enkr, enkr beatbox, beatbox, singapore beatbox, asia beatboix, vonderie, vonderie beatbox, 555, 555 beatbox" />
+
+  <title>ENKR | Pang Jing Hui | 彭競辉</title>
+
+  <link rel="stylesheet" href="css/style.css?v=3.0.0" />
+
+</head>
+
+<body>
+  <preloader-component></preloader-component>
+  <eye-candy-component></eye-candy-component>
+  <div class="cursor"></div>
+  <platforms-component></platforms-component>
+
+  <!-- <iframe src="/assets/audios/melancholy.wav" type="audio/wav" allow="autoplay" id="audio" volume="0.1"
+    style="display:none"></iframe>
+    <audio autoplay volume="0.1">
+      <source src="/assets/audios/melancholy.wav" type="audio/wav">
+    </audio> -->
+    <!-- <iframe id="audioIframe" src="/assets/audios/melancholy.wav"   type="audio/wav" allow="autoplay" style="display:none"></iframe> -->
+  <iframe src="assets/audios/melancholy.wav" type="audio/wav" allow="autoplay" id="audio" style="display:none"></iframe>
+  <!-- <audio autoplay> -->
+  <audio controls autoplay loop hidden>
+    <source src="assets/audios/melancholy.wav" type="audio/wav">
+  </audio>
+
+
+  <!-- <script>
+    var audioIframe = document.getElementById('audioIframe');
+
+    // Wait for the iframe to load
+    audioIframe.addEventListener('load', function () {
+      // Send a postMessage to the iframe to adjust the volume
+      audioIframe.contentWindow.postMessage({ volume: 0.5 }, '*');
+    });
+
+    // Listen for the volume response from the iframe
+    window.addEventListener('message', function (event) {
+      if (event.origin === window.location.origin && event.source === audioIframe.contentWindow) {
+        // Volume response received from the iframe
+        var volume = event.data.volume;
+        console.log('Volume adjusted:', volume);
+      }
+    });
+  </script> -->
+
+
+  <!-- <audio id="audio-melancholy" src="assets/audios/melancholy.wav" loop volume="0.1"></audio> -->
+  <!-- <embed src="/assets/audios/melancholy.wav" loop="true" autostart="true" width="2" height="0"> -->
+
+  <!-- <audio
+    src="/assets/audios/melancholy.wav"
+    autoplay
+    loop
+    volume="0.1"
+    >
+    </audio> -->
+
+  <!-- <script>
+    // var audio = document.getElementById('audio');
+    // audio.volume = 0.5; // Set the volume to 50%
+
+//     let audio = document.getElementById("audio-melancholy");
+//
+//     console.log("audio")
+//     console.log(audio)
+//
+//     if (audio !== undefined) {
+//       window.addEventListener('canplaythrough', function () {
+//         console.log("Playing ...")
+//         audio.play();
+//       });
+//     }
+  </script> -->
+
+  <!--
+    TODO: Find a way to not need to load so many unused package?
+  -->
+  <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script type="text/javascript" defer src="js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,31 @@
+/*
+GitHub: @enkr1, Instagram: @enkr1
+*/
+
+// Variables
+@import "_00-colours";
+@import "_variables";
+
+// Global and reusable
+@import "_animations";
+@import "_global";
+@import "_eye_candies";
+
+// Sections
+@import "_preload";
+@import "_nav_bar";
+@import "_home";
+@import "_about";
+@import "_specialisation";
+@import "_experience";
+@import "_portfolio";
+@import "_contact";
+@import "_footer";
+@import "_interest";
+@import "_bbx-achievements";
+@import "_resume";
+
+// TODO: Refactor to 00, 01, 02.
+@import "_02-platform";
+
+// ...

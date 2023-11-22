@@ -1,32 +1,34 @@
 [
   {
-    "company_title": "Pixium Digital Pte Ltd",
+    "company_title": "Pixium Digital Pte Ltd, Singapore.",
     "country": "Singapore",
     "duration": "2021 - Present",
-    "description": "Software engineer"
+    "description": "Mid-level software engineer",
+    "points": [
+      "Developed and maintained software applications using Elixir (Phoenix framework), PHP (Yii2 framework), HTML, SCSS, CSS, JavaScript, and other relevant technologies.",
+      "Implemented efficient data structures and algorithms, and wrote optimized SQL queries for PostgreSQL databases.",
+      "Worked with Dockerised environments, and applied DevOps practices such as CI/CD pipelines to deploy applications on AWS services like S3 bucket, Textract, and EC2 instances."
+    ]
   },
   {
     "company_title": null,
     "country": null,
     "duration": "2020 - 2021",
-    "description": "22 weeks internship programme as a software engineer"
+    "description": "22 weeks internship programme as a software engineer",
+    "points": [
+      "Assisted in the development and maintenance of software applications using Bash, GitHub, macOS, WordPress, PHP, JavaScript, and Flutter.",
+      "Gained experience with Docker and other relevant technologies."
+    ]
   },
   {
-    "company_title": "Singapore Polytechnic",
+    "company_title": "Diploma in Information Technology, Singapore Polytechnic, Singapore.",
     "country": "Singapore",
-    "duration": "2020",
-    "description": "Developed a web application (Digital service & incentive platform) as final year project that was awarded 3rd place in 2020 cohort"
-  },
-  {
-    "company_title": null,
-    "country": null,
-    "duration": "2019 - 2020",
-    "description": "Specialised in data structure algorithm & user interface design"
-  },
-  {
-    "company_title": null,
-    "country": null,
-    "duration": "2018 - 2022",
-    "description": "Diploma in information technology specialised in oftware development"
+    "duration": "2018 - 2021",
+    "description": "Specialised in UI/UX, Data Structure and Algorithms, and Software Development.",
+    "points": [
+      "Completed modules in software development, data structures and algorithms, UI/UX, database management, DevOps, and more.",
+      "Contributed to extracurricular activities, serving as an active member of the Singapore Polytechnic Vocal Talent group and a sub-committee member of the Singapore Polytechnic Arts Council.",
+      "Successfully completed a Final Year Project on a Digital Service & Incentive Platform web application for Sentosa Singapore, earning third place recognition."
+    ]
   }
 ]

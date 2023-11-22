@@ -31,7 +31,7 @@
     {
       "name": "YouTube",
       "className": "yt",
-      "link": "https://www.youtube.com/channel/UCJJmK5bN3b4izpMb2vtRXpw",
+      "link": "https://www.youtube.com/@enkr1",
       "fa": "fa-youtube"
     }
   ],
@@ -60,5 +60,13 @@
         }
       ]
     }
+  ],
+  "list_skill_sets": [
+    "Proficient in functional programming languages Elixir (Phoenix framework) and PHP (Yii2 framework).",
+    "Proficient in web development technologies such as HTML, SCSS, CSS, and JavaScript.",
+    "Strong background in data structures and algorithms.",
+    "Proficient in writing SQL queries and experienced with PostgreSQL.",
+    "Competent in the dockerised environment.",
+    "Advanced beginner in DevOps and experienced in AWS services such as S3 bucket, Textract and EC2 instances."
   ]
 }

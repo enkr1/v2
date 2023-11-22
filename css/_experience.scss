@@ -1,0 +1,173 @@
+.experience {
+    height: fit-content;
+    // min-height: 100vh;
+    // height: 100vh;
+    background-color: #000;
+    padding: 3rem 0;
+    overflow: hidden;
+
+    @media only screen and (max-width: $screen_md_2) {
+        padding: 8rem 0;
+    }
+
+    .section-heading {
+        display: none;
+    }
+
+    .container {
+        // ...
+
+        .timeline-container {
+            margin: 0 0 0 12vw;
+            height: 100vh;
+            min-height: 100vh;
+            height: fit-content;
+            // border-left: 3px solid $theme-color;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            // gap: 30vh;
+
+            &::before,
+            &::after {
+                content: "";
+            }
+
+            #svg-journey-route {
+                position: absolute;
+                // width: 100vw;
+                width: 170rem;
+                top: -18rem;
+                left: -10rem;
+                height: fit-content;
+                opacity: .1;
+
+                // 1281
+                @media all and (max-width: $screen_lg) {
+                    width: 150rem;
+                    left: -5rem;
+                    top: -4rem;
+                }
+
+                // NOTE: Decided to not show the svg on mobile
+                //                 // 992
+                //                 @media all and (max-width: $screen_md_2) {
+                //                     width: 8rem;
+                //                     left: 3rem;
+                //                     top: -8rem;
+                //                     mix-blend-mode: difference;
+                //                 }
+                //
+                //                 // 480
+                //                 @media all and (max-width: $screen_xs) {
+                //                     // ...
+                //                 }
+
+                path {
+                    animation: line-anime 8s ease-in-out forwards .3s;
+
+                    @media all and (max-width: $screen_xs) {
+                        animation: line-anime 3s ease-in-out forwards .3s;
+                    }
+                }
+            }
+
+            @media all and (max-width: $screen_lg) {
+                margin: 0 0 0 20vw;
+            }
+
+            @media all and (max-width: $screen_md_2) {
+                margin: 0 0 0 10vw;
+            }
+
+            @media all and (max-width: $screen_xs) {
+                margin: 0 0 0 8vw;
+            }
+
+            .single-exp-container {
+                position: relative;
+                padding: 0 0 0 4rem;
+
+                &::before {
+                    position: absolute;
+                    content: '';
+                    height: 2rem;
+                    width: 2rem;
+                    top: 0;
+                    left: -1.2rem;
+                    background-color: $theme-color;
+                    transition: .8s all ease-in-out;
+                }
+
+                &:hover {
+                    &::before {
+                        transform: rotate(225deg);
+                    }
+                }
+
+                .date-and-title-container {
+                    position: relative;
+                    text-align: left;
+                    width: 100%;
+                    margin: 0 0 .8rem;
+                    // border-bottom: .8px solid $theme-light-color;
+
+                    &::before,
+                    &::after {
+                        position: absolute;
+                        display: block;
+                        top: 50%;
+                    }
+
+                    &::before {
+                        content: attr(data-date);
+                        text-align: right;
+                        width: 20rem;
+                        min-width: 12rem;
+                        font-size: 2rem;
+                        transform: translate(-30rem, -125%);
+
+                        @media all and (max-width: $screen_md_2) {
+                            font-size: 1.6rem;
+                            text-align: left;
+                            transform: translate(-15rem, -20%) rotate(-90deg);
+                            width: fit-content;
+                        }
+                    }
+
+                    h1 {
+                        font-size: 2rem;
+                        text-transform: uppercase;
+                        font-weight: 300;
+                        margin-bottom: 0.3rem;
+                        letter-spacing: .1rem;
+
+                        @media all and (max-width: $screen_md_2) {
+                            font-size: 1.6rem;
+                        }
+                    }
+
+                    p {
+                        @media all and (max-width: $screen_md_2) {
+                            font-size: 1.4rem;
+                        }
+                    }
+
+                    .exp-desc {
+                        font-weight: 400;
+                    }
+                }
+
+                .points-container {
+                    position: relative;
+
+                    p {
+                        font-size: 1.4rem;
+                        margin: 0 0 1rem 1rem;
+                        font-weight: 200;
+                    }
+                }
+            }
+        }
+    }
+}

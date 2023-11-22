@@ -1,0 +1,120 @@
+.preload {
+    position: fixed;
+    top: 0;
+    z-index: 9999;
+    height: 100vh;
+    width: 100%;
+    transition: all 1s ease-in-out;
+
+    .preload-top {
+        top: 0;
+        height: 50vh;
+        background-color: $theme-dark-color;
+        width: 100vw;
+        // transform-origin: top left;
+        // transform-style: preserve-3D;
+    }
+
+    .preload-bot {
+        bottom: 0;
+        height: 50vh;
+        background-color: $theme-dark-color;
+        width: 100vw;
+        // transform-origin: bottom right;
+        // transform-style: preserve-3D;
+    }
+
+    // NEW
+    .preload-box {
+        top: 0;
+        height: 100vh;
+        width: 100vw;
+        // backdrop-filter: blur(2rem);
+        background-color: $theme-dark-color;
+        opacity: .8;
+    }
+
+    #svg-loading {
+        width: 100%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 3;
+
+        @media all and (max-width: $screen_md_2) {
+            width: 16%;
+        }
+
+        @media all and (max-width: $screen_sm) {
+            width: 26%;
+            transform: translate(-50%, -25%);
+        }
+    }
+}
+
+// REMOVED
+.loading-leave {
+    position: absolute;
+    width: 8rem;
+    height: 8rem;
+    background: #ffffff20;
+    border-bottom-right-radius: 100%;
+    border-top-left-radius: 100%;
+    top: 37%;
+    left: 48%;
+    transform: translate(-50%, -100%);
+    animation: preload-anim 10s linear infinite alternate;
+
+    @media all and (max-width: $screen_lg) {
+        top: 36%;
+        left: 47%;
+    }
+
+    @media all and (max-width: $screen_md_2) {
+        width: 9rem;
+        height: 9rem;
+        top: 36%;
+        left: 45%;
+    }
+
+    @media all and (max-width: $screen_sm) {
+        width: 6rem;
+        height: 6rem;
+        top: 40%;
+        left: 43%;
+    }
+}
+
+// FINISH CLASSES
+.preload-finish {
+    opacity: 0;
+    pointer-events: none;
+    transition: all 1s ease-in-out;
+}
+
+.loading-finish {
+    opacity: 0;
+}
+
+.moveup {
+    transform: translateY(-100%);
+    transition: all 1s ease-in-out;
+    // transform-origin: 50% 50%;
+    // transform: translate(0%, 50vh) rotate(180deg);
+    // transform: rotate(90deg);
+}
+
+.movedown {
+    transform: translateY(100%);
+    transition: all 1s ease-in-out;
+    // transform: rotate(90deg);
+    // transform: translate(100%, -100%) rotate(180deg);
+}
+
+.clear-blur {
+    backdrop-filter: blur(0) !important;
+    transition: all 2s ease-in-out;
+}
+
+/*End global*/
