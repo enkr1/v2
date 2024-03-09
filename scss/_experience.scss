@@ -41,6 +41,7 @@
                 left: -10rem;
                 height: fit-content;
                 opacity: .1;
+                z-index: 1;
 
                 // 1281
                 @media all and (max-width: $screen_lg) {
@@ -87,6 +88,7 @@
             .single-exp-container {
                 position: relative;
                 padding: 0 0 0 4rem;
+                z-index: 2;
 
                 &::before {
                     position: absolute;

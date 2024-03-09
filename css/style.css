@@ -1802,6 +1802,7 @@ header {
   height: -moz-fit-content;
   height: fit-content;
   opacity: .1;
+  z-index: 1;
 }
 @media all and (max-width: 1281px) {
   .experience .container .timeline-container #svg-journey-route {
@@ -1838,6 +1839,7 @@ header {
 .experience .container .timeline-container .single-exp-container {
   position: relative;
   padding: 0 0 0 4rem;
+  z-index: 2;
 }
 .experience .container .timeline-container .single-exp-container::before {
   position: absolute;
