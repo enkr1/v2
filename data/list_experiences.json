@@ -1,9 +1,29 @@
 [
   {
+    "company_title": "ByteDance Pte Ltd, Singapore.",
+    "country": "Singapore",
+    "duration": "2023 - Present",
+    "description": "Software Engineer",
+    "points": [
+      "aPaaS",
+      "Redis",
+      "JS, React & SQL"
+    ]
+  },
+  {
     "company_title": "Pixium Digital Pte Ltd, Singapore.",
     "country": "Singapore",
-    "duration": "2021 - Present",
-    "description": "Mid-level software engineer",
+    "duration": "2022 - 2023",
+    "description": "Lead Software Engineer (PM)",
+    "points": [
+      "Led in the organisation for applications by utilsing Elixir"
+    ]
+  },
+  {
+    "company_title": "Pixium Digital Pte Ltd, Singapore.",
+    "country": "Singapore",
+    "duration": "2021 - 2022",
+    "description": "Mid-level Software Engineer",
     "points": [
       "Developed and maintained software applications using Elixir (Phoenix framework), PHP (Yii2 framework), HTML, SCSS, CSS, JavaScript, and other relevant technologies.",
       "Implemented efficient data structures and algorithms, and wrote optimized SQL queries for PostgreSQL databases.",
@@ -14,7 +34,7 @@
     "company_title": null,
     "country": null,
     "duration": "2020 - 2021",
-    "description": "22 weeks internship programme as a software engineer",
+    "description": "Software Engineer Intern (22 weeks)",
     "points": [
       "Assisted in the development and maintenance of software applications using Bash, GitHub, macOS, WordPress, PHP, JavaScript, and Flutter.",
       "Gained experience with Docker and other relevant technologies."

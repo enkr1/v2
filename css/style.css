@@ -1604,7 +1604,7 @@ header {
   }
 }
 .about .container .window.window-right .rm-body h2 {
-  margin: 1rem 0 0;
+  margin: 1.3rem 0 .8rem;
 }
 .about .container .window.window-right .rm-body .about-social-media ul {
   display: -webkit-box;
